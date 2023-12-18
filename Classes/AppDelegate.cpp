@@ -44,7 +44,7 @@ using namespace CocosDenshion;
 
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(1200, 800);    // 调节窗口大小（当前 3:2）
+static cocos2d::Size designResolutionSize = cocos2d::Size(1256, 707);    // 调节窗口大小（当前与棋盘图片大小相同）
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
@@ -85,7 +85,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto glview = director->getOpenGLView();
     if(!glview) {
         // 设置应用的标题名称
-        std::string name = ConfigController::getInstance()->getCNByID(1001);
+        std::string name = ConfigController::getInstance()->getCNByID(WORDS_GAME_NAME);
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
         glview = GLViewImpl::createWithRect(name, cocos2d::Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
 #else
