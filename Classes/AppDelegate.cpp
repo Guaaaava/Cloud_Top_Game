@@ -44,7 +44,11 @@ using namespace CocosDenshion;
 
 USING_NS_CC;
 
+<<<<<<< Updated upstream
 static cocos2d::Size designResolutionSize = cocos2d::Size(1200, 800);    // 调节窗口大小（当前 3:2）
+=======
+static cocos2d::Size designResolutionSize = cocos2d::Size(1150, 950);    // 窗口大小
+>>>>>>> Stashed changes
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
