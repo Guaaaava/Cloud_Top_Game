@@ -37,6 +37,20 @@ bool CTGScene::init()
 	layer->addChild(boardNode, 1);			// 对战场景 z 值为 1
 	prt_backGround = boardNode;
 
+
+	// 将它们添加到场景中
+	//this->addChild(kni);
+	this->addChild(sam);
+	
+	
+	//kni->heroAttack();
+	//kni->heroRun(-500,0);
+	sam->heroRun(500, 0);
+	
+	//sam->heroAttack();
+	
+	//sam->heroDead();
+	
 	// 棋盘左侧中心，右侧中心
 	Vec2 leftOrigin = origin + Vec2(visibleSize.width * 0.05f, visibleSize.height / 2);
 	Vec2 rightOrigin = origin + Vec2(visibleSize.width * 0.95f, visibleSize.height / 2);

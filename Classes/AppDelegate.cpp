@@ -27,7 +27,7 @@
 #include "CTGScene.h"
 #include "ConfigController.h"
 
-#include"HeroAction.h"
+#include"Hero.h"
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
 
@@ -128,13 +128,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     // auto scene = HelloWorld::createScene();
-    // auto scene = CTGScene::create();                // 创建金铲铲之战场景
+     auto scene = CTGScene::create();                // 创建金铲铲之战场景
     // run
-    // director->runWithScene(scene);
+     director->runWithScene(scene);
     // test sprite action
-     auto hero_action = HeroAction::create();
+    //auto hero_action = Hero::create();
 
-     director->runWithScene(hero_action);
+    // director->runWithScene(hero_action);
 
     
     return true;

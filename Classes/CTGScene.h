@@ -6,9 +6,7 @@ USING_NS_CC;			// 相当于 using namespace cocos2d;
 #include "ui/CocosGUI.h"
 using namespace ui;
 
-
-
-#include"HeroAction.h"
+#include"Hero.h"
 
 #define WORDS_GAME_NAME 1001	// “金铲铲之战”编码
 #define WORDS_START     1002	// “开始”编码
@@ -57,5 +55,8 @@ private:
 	// 创建一个商店结点
 	void createShopNode();
 
-
+	
+	Samurai* sam = Samurai::create();
+	Knight* kni = Knight::create();
+	
 };
