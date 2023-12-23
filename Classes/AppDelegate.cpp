@@ -24,6 +24,7 @@
 
 #include "AppDelegate.h"
 // #include "HelloWorldScene.h"
+#include"startScene.h"
 #include "CTGScene.h"
 #include "ConfigController.h"
 
@@ -125,12 +126,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     register_all_packages();
 
+    /* 游戏流程 */
     // create a scene. it's an autorelease object
     // auto scene = HelloWorld::createScene();
-    auto scene = CTGScene::create();                // 创建金铲铲之战场景
-
+    auto startScene = STARTScene::create();//创建开始游戏场景
     // run
-    director->runWithScene(scene);
+    director->runWithScene(startScene);
 
     return true;
 }
