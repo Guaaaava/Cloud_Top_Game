@@ -4,71 +4,71 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>1_Knight_Attack</key>
+            <key>1_LightningMage_Attack</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.46729,0.476744}</string>
+                <string>{0.445313,0.188811}</string>
                 <key>spriteOffset</key>
-                <string>{0,-5}</string>
+                <string>{9,-21}</string>
                 <key>spriteSize</key>
-                <string>{45,76}</string>
+                <string>{82,65}</string>
                 <key>spriteSourceSize</key>
-                <string>{107,86}</string>
+                <string>{128,143}</string>
                 <key>textureRect</key>
-                <string>{{1,141},{45,76}}</string>
+                <string>{{211,1},{82,65}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>2_Knight_Attack</key>
+            <key>2_LightningMage_Attack</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.429907,0.5}</string>
+                <string>{0.429688,0.181818}</string>
                 <key>spriteOffset</key>
-                <string>{-11,-7}</string>
+                <string>{9,-20}</string>
                 <key>spriteSize</key>
-                <string>{45,72}</string>
+                <string>{80,67}</string>
                 <key>spriteSourceSize</key>
-                <string>{107,86}</string>
+                <string>{128,143}</string>
                 <key>textureRect</key>
-                <string>{{48,141},{45,72}}</string>
+                <string>{{295,1},{80,67}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>3_Knight_Attack</key>
+            <key>3_LightningMage_Attack</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.345794,0.5}</string>
+                <string>{0.4375,0.181818}</string>
                 <key>spriteOffset</key>
-                <string>{1,-8}</string>
+                <string>{2,-24}</string>
                 <key>spriteSize</key>
-                <string>{91,70}</string>
+                <string>{112,59}</string>
                 <key>spriteSourceSize</key>
-                <string>{107,86}</string>
+                <string>{128,143}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{91,70}}</string>
+                <string>{{1,1},{112,59}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>4_Knight_Attack</key>
+            <key>4_LightningMage_Attack</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.448598,0.511628}</string>
+                <string>{0.429688,0.181818}</string>
                 <key>spriteOffset</key>
-                <string>{-16,-10}</string>
+                <string>{9,-24}</string>
                 <key>spriteSize</key>
-                <string>{69,66}</string>
+                <string>{94,59}</string>
                 <key>spriteSourceSize</key>
-                <string>{107,86}</string>
+                <string>{128,143}</string>
                 <key>textureRect</key>
-                <string>{{1,73},{69,66}}</string>
+                <string>{{115,1},{94,59}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -82,13 +82,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>Knight_Attack.png</string>
+            <string>LightningMage_Attack.png</string>
             <key>size</key>
-            <string>{94,218}</string>
+            <string>{376,69}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:db755a16d0d7436afd65d3fa238dc238:7ad4533b01efb566456c16dc56f766a5:1ae0bacebfc714cf63341705a335069b$</string>
+            <string>$TexturePacker:SmartUpdate:1fa561a264cb015dc14c3ae128ae3aca:2ada4376c8e224cc907238e6be456895:ea016d250023daee99e332e38bf63d00$</string>
             <key>textureFileName</key>
-            <string>Knight_Attack.png</string>
+            <string>LightningMage_Attack.png</string>
         </dict>
     </dict>
 </plist>

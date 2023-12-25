@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>1</key>
+            <key>1_Samurai_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -21,7 +21,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>2</key>
+            <key>2_Samurai_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -38,7 +38,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>3</key>
+            <key>3_Samurai_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -55,7 +55,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>4</key>
+            <key>4_Samurai_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -72,7 +72,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>5</key>
+            <key>5_Samurai_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -89,7 +89,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>6</key>
+            <key>6_Samurai_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>

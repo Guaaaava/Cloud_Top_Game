@@ -4,139 +4,139 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>1_Samurai_Run</key>
+            <key>1_Kunoichi_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.304688,0.046875}</string>
+                <string>{0.507813,0.03125}</string>
                 <key>spriteOffset</key>
-                <string>{-27,-31}</string>
+                <string>{-1,-33}</string>
                 <key>spriteSize</key>
-                <string>{56,66}</string>
+                <string>{44,62}</string>
                 <key>spriteSourceSize</key>
                 <string>{128,128}</string>
                 <key>textureRect</key>
-                <string>{{1,69},{56,66}}</string>
+                <string>{{133,1},{44,62}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>2_Samurai_Run</key>
+            <key>2_Kunoichi_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.3125,0.078125}</string>
+                <string>{0.5,0.0234375}</string>
                 <key>spriteOffset</key>
-                <string>{-26,-31}</string>
+                <string>{1,-33}</string>
                 <key>spriteSize</key>
-                <string>{56,66}</string>
+                <string>{40,62}</string>
                 <key>spriteSourceSize</key>
                 <string>{128,128}</string>
                 <key>textureRect</key>
-                <string>{{1,137},{56,66}}</string>
+                <string>{{145,65},{40,62}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>3_Samurai_Run</key>
+            <key>3_Kunoichi_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.3125,0.0625}</string>
+                <string>{0.539063,0.015625}</string>
                 <key>spriteOffset</key>
-                <string>{-26,-32}</string>
+                <string>{6,-33}</string>
                 <key>spriteSize</key>
-                <string>{56,64}</string>
+                <string>{46,62}</string>
                 <key>spriteSourceSize</key>
                 <string>{128,128}</string>
                 <key>textureRect</key>
-                <string>{{1,341},{56,64}}</string>
+                <string>{{81,67},{46,62}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>4_Kunoichi_Run</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.515625,0.03125}</string>
+                <key>spriteOffset</key>
+                <string>{2,-34}</string>
+                <key>spriteSize</key>
+                <string>{38,60}</string>
+                <key>spriteSourceSize</key>
+                <string>{128,128}</string>
+                <key>textureRect</key>
+                <string>{{1,67},{38,60}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>4_Samurai_Run</key>
+            <key>5_Kunoichi_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.34375,0.0625}</string>
+                <string>{0.515625,0.015625}</string>
                 <key>spriteOffset</key>
-                <string>{-25,-32}</string>
+                <string>{1,-32}</string>
                 <key>spriteSize</key>
-                <string>{56,64}</string>
+                <string>{40,64}</string>
                 <key>spriteSourceSize</key>
                 <string>{128,128}</string>
                 <key>textureRect</key>
-                <string>{{1,407},{56,64}}</string>
+                <string>{{1,1},{40,64}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>5_Samurai_Run</key>
+            <key>6_Kunoichi_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.28125,0.0546875}</string>
+                <string>{0.53125,0.015625}</string>
                 <key>spriteOffset</key>
-                <string>{-26,-31}</string>
+                <string>{1,-32}</string>
                 <key>spriteSize</key>
-                <string>{56,66}</string>
+                <string>{40,64}</string>
                 <key>spriteSourceSize</key>
                 <string>{128,128}</string>
                 <key>textureRect</key>
-                <string>{{1,205},{56,66}}</string>
+                <string>{{43,1},{40,64}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>6_Samurai_Run</key>
+            <key>7_Kunoichi_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.34375,0.046875}</string>
+                <string>{0.539063,0.03125}</string>
                 <key>spriteOffset</key>
-                <string>{-26,-31}</string>
+                <string>{6,-33}</string>
                 <key>spriteSize</key>
-                <string>{56,66}</string>
+                <string>{46,62}</string>
                 <key>spriteSourceSize</key>
                 <string>{128,128}</string>
                 <key>textureRect</key>
-                <string>{{1,273},{56,66}}</string>
+                <string>{{85,1},{46,62}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>7_Samurai_Run</key>
+            <key>8_Kunoichi_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.335938,0.078125}</string>
+                <string>{0.53125,0.03125}</string>
                 <key>spriteOffset</key>
-                <string>{-26,-32}</string>
+                <string>{2,-34}</string>
                 <key>spriteSize</key>
-                <string>{56,64}</string>
+                <string>{38,60}</string>
                 <key>spriteSourceSize</key>
                 <string>{128,128}</string>
                 <key>textureRect</key>
-                <string>{{1,473},{56,64}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>8_Samurai_Run</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.351563,0.046875}</string>
-                <key>spriteOffset</key>
-                <string>{-26,-31}</string>
-                <key>spriteSize</key>
-                <string>{58,66}</string>
-                <key>spriteSourceSize</key>
-                <string>{128,128}</string>
-                <key>textureRect</key>
-                <string>{{1,1},{58,66}}</string>
+                <string>{{41,67},{38,60}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -150,13 +150,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>Samurai_Run.png</string>
+            <string>Kunoichi_Run.png</string>
             <key>size</key>
-            <string>{60,538}</string>
+            <string>{186,128}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:7aceb9d1748626e73f7eec7284ba89b5:c403976bcd37b5e6ae7bcc5e4eb61525:2226657b73cdef63e882c9c99f992bca$</string>
+            <string>$TexturePacker:SmartUpdate:2fb223450227c1dfdb701a53fcd61cb9:968dd674dede2168f8f36532cc92938e:0b553fee0fcccfd7c34d193672e602e8$</string>
             <key>textureFileName</key>
-            <string>Samurai_Run.png</string>
+            <string>Kunoichi_Run.png</string>
         </dict>
     </dict>
 </plist>

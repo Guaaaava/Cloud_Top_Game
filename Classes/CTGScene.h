@@ -58,5 +58,6 @@ private:
 	
 	Samurai* sam = Samurai::create();
 	Knight* kni = Knight::create();
-	
+	Kunoichi* kun = Kunoichi::create();
+	LightningMage* lig = LightningMage::create();
 };

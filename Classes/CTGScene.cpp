@@ -39,16 +39,18 @@ bool CTGScene::init()
 
 
 	// 将它们添加到场景中
-	//this->addChild(kni);
+	
 	this->addChild(sam);
-	
-	
-	//kni->heroAttack();
+	this->addChild(kni);
+	this->addChild(kun);
+	this->addChild(lig);
 	//kni->heroRun(-500,0);
-	sam->heroRun(500, 0);
-	
+	//sam->heroRunAndAttack(Vec2(100,100));
+	kni->heroRunAndAttack(Vec2(100,100));
+	kun->heroRunAndAttack(Vec2(100, 100));
+	lig->heroRunAndAttack(Vec2(100, 100));
+	//kni->heroAttack();
 	//sam->heroAttack();
-	
 	//sam->heroDead();
 	
 	// 棋盘左侧中心，右侧中心
