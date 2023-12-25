@@ -31,30 +31,26 @@ public:
 	virtual bool init();
 
 	void initAllChess();				// 初始化牌库
-	void initAllChessButton();			// 初始化所有卡牌按钮
-
-	void createInitChessButton();		// 创建开始的卡牌按钮
-
-	void createLevelUpButton();			// 创建升级按钮
-	void levelUpButton_onClick(Ref* sender, Widget::TouchEventType type);	// 升级按钮的回调函数
-	
 	void getChessPrice();				// 获取当前卡牌价格
 
-	void createRefreshShopButton();		// 创建刷新商店按钮
-	void refreshShopButton_onClick(Ref* sender, Widget::TouchEventType type);	// 刷新商店的回调函数
+	// 创建通用的卡牌按钮
+	void createChessButton(int numOFChess, int index);
 
+	void createInitChessButton();		// 创建开始的卡牌按钮
+	void createLevelUpButton();			// 创建升级按钮
+	void createRefreshShopButton();		// 创建刷新商店按钮
 	void createLevelLabel();			// 创建经验值标签
 	void createMoneyLabel();			// 创建金币标签
-
+	
 	// 获取从左到右第numofChess张卡牌中心位置
 	Vec2 getChessPosition(const int numofChess);
 
-	void transformExpToLevel();			// 经验转化为等级
 	std::string getLevelLabelStr();		// 得到等级标签更新后的内容
-	
-	void refreshShop();					// （根据等级）刷新商店
 	std::string getMoneyLabelStr();		// 得到金币标签更新后的内容
 
+	void transformExpToLevel();			// 经验转化为等级
+	void refreshShop();					// （根据等级）刷新商店
+	
 	void updateButtonState();			// 更新按钮禁用状态
 
 	int getMoney() { return money; };	// 获取当前金币
@@ -82,7 +78,6 @@ private:
 	Label* labelMoney;				// 金币背景精灵上标签
 
 	int allChess[NUM_CHESS + 5];			// 所有卡牌（init后不可改变）
-	Button* allChessButton[NUM_CHESS + 5];	// 所有卡牌按钮（init后不可改变）
 
 	int chess[NUM_CHESS_SHOP + 5];			// 存当前卡牌
 	Button* chessButton[NUM_CHESS_SHOP + 5];	// 存当前卡牌按钮
