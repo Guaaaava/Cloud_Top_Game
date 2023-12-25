@@ -152,7 +152,7 @@ void Shop::createInitChessButton()
  * **************************************************/
 void Shop::createLevelUpButton()
 {
-    std::string norPath = "NormalLevelUpBotton.png";		// 未被选中时按钮样式
+    std::string norPath = "NormalLevelUpBotton.png";	// 未被选中时按钮样式
     std::string selPath = "SelectedLevelUpBotton.png";	// 被选中时按钮样式
     std::string disPath = "DisabledLevelUpButton.png";  // 被禁用时按钮样式
     buttonLevelUp = Button::create(norPath, selPath, disPath);// 创建按钮
@@ -162,6 +162,7 @@ void Shop::createLevelUpButton()
     buttonLevelUp->setTitleFontSize(24.0f);					// 设置字号
     buttonLevelUp->setTitleColor(Color3B::BLACK);			// 设置颜色
     buttonLevelUp->setPosition(origin + Vec2(visibleSize.width * 0.075f, SHOP_HEIGHT * 0.75f));	// 设置位置
+
     CTGScene::getLayer()->addChild(buttonLevelUp, 3);						// 按钮 z 值为 3
 
     buttonLevelUp->addTouchEventListener(this, toucheventselector(Shop::levelUpButton_onClick));
@@ -186,6 +187,7 @@ void Shop::createRefreshShopButton()
     buttonRefreshShop->setTitleFontSize(24.0f);					// 设置字号
     buttonRefreshShop->setTitleColor(Color3B::BLACK);			// 设置颜色
     buttonRefreshShop->setPosition(origin + Vec2(visibleSize.width * 0.075f, SHOP_HEIGHT * 0.25f));	// 设置位置
+
     CTGScene::getLayer()->addChild(buttonRefreshShop, 3);						// 按钮 z 值为 3
 
     buttonRefreshShop->addTouchEventListener(this, toucheventselector(Shop::refreshShopButton_onClick));
@@ -411,6 +413,7 @@ void Shop::refreshShop()
             r2 = (u2(randomEngine) % 2 + 9);    // 9~10是3费
 
         // 移除原按钮（先移除再更新！！）
+        chessButton[num]->setPosition(origin);  // 移到左下角
         chessButton[num]->setEnabled(false);
         chessButton[num]->setVisible(false);
 

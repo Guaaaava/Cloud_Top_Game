@@ -81,8 +81,8 @@ private:
 	Sprite* spriteMoneyLabel;		// 金币标签背景精灵
 	Label* labelMoney;				// 金币背景精灵上标签
 
-	int allChess[NUM_CHESS + 5];			// 所有卡牌
-	Button* allChessButton[NUM_CHESS + 5];	// 所有卡牌按钮
+	int allChess[NUM_CHESS + 5];			// 所有卡牌（init后不可改变）
+	Button* allChessButton[NUM_CHESS + 5];	// 所有卡牌按钮（init后不可改变）
 
 	int chess[NUM_CHESS_SHOP + 5];			// 存当前卡牌
 	Button* chessButton[NUM_CHESS_SHOP + 5];	// 存当前卡牌按钮
