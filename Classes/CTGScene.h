@@ -30,7 +30,11 @@ private:
 
 	static LayerColor* layer;	// 记录背景层（静态成员）
 
-	// virtual bool onTouchBegan(Touch* touch, Event* event);	// 按下按钮的回调
+	Sprite* touchingSprite;
 
-	// virtual void onTouchEnded(Touch* touch, Event* event);	// 释放按钮的回调
+	virtual bool onTouchBegan(Touch* touch, Event* event);	// 按下鼠标的回调
+	virtual void onTouchMoved(Touch* touch, Event* event);	// 移动鼠标的回调
+	virtual void onTouchEnded(Touch* touch, Event* event);	// 释放鼠标的回调
+
+	Sprite* judgePointInSprite(Point pnt);	// 判断触摸点是否在已有精灵区域内，是则返回该精灵，否则返回nullptr
 };

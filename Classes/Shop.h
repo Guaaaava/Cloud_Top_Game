@@ -36,11 +36,12 @@ public:
 	// 创建通用的卡牌按钮
 	void createChessButton(int numOFChess, int index);
 
-	void createInitChessButton();		// 创建开始的卡牌按钮
+	void createInitialChessButton();	// 创建开始的卡牌按钮
 	void createLevelUpButton();			// 创建升级按钮
 	void createRefreshShopButton();		// 创建刷新商店按钮
 	void createLevelLabel();			// 创建经验值标签
 	void createMoneyLabel();			// 创建金币标签
+	void createSellSprite();			// 创建出售区域精灵
 	
 	// 获取从左到右第numofChess张卡牌中心位置
 	Vec2 getChessPosition(const int numofChess);
@@ -53,6 +54,7 @@ public:
 	
 	void updateButtonState();			// 更新按钮禁用状态
 
+	Rect getSellOrigin() { return spriteSellOrigin->getBoundingBox(); };	// 获取出售区域碰撞箱
 	int getMoney() { return money; };	// 获取当前金币
 	int getExp() { return expr; };		// 获取当前经验
 	int getLevel() { return level; };	// 获取当前等级
@@ -76,6 +78,9 @@ private:
 	Label* labelLevel;				// 经验值背景精灵上标签
 	Sprite* spriteMoneyLabel;		// 金币标签背景精灵
 	Label* labelMoney;				// 金币背景精灵上标签
+
+	Sprite* spriteSellOrigin;			// 出售区域
+	Label* labelSellOrigin;				// 出售区域上标签
 
 	int allChess[NUM_CHESS + 5];			// 所有卡牌（init后不可改变）
 

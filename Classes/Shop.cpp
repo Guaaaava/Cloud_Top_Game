@@ -2,8 +2,6 @@
 #include "Shop.h"
 #include "GameController.h"
 
-#include <iostream>
-
 /****************************************************
  * 功能：初始化商店，初始化成功返回true，反之返回false
  * 作者：黄辰宇
@@ -15,7 +13,7 @@ bool Shop::init()
 {
     bool ret = true;
 
-    money = 0, expr = 0, level = 0; // 初始化
+    money = 20, expr = 0, level = 0; // 初始化
     for (int i = 0; i < NUM_CHESS_SHOP + 5; i++)
         chessButton[i] = nullptr;
     
@@ -24,10 +22,11 @@ bool Shop::init()
 
     createLevelLabel();             // 经验值标签
     createMoneyLabel();             // 金币标签
+    createSellSprite();             // 出售区域精灵
 
     initAllChess();                 // 初始化牌库
 
-    createInitChessButton();        // 开始的卡牌按钮
+    createInitialChessButton();     // 开始的卡牌按钮
     getChessPrice();                // 获取当前卡牌价格
 
     // 更新按钮禁用状态
@@ -121,6 +120,7 @@ void Shop::createChessButton(int numOfChess, int index)
                 labelMoney->setString(getMoneyLabelStr());
 
                 // 在棋盘上生成英雄
+                GameController::getInstance()->createHeroInChessBoard(index);
 
                 break;
             default:
@@ -136,7 +136,7 @@ void Shop::createChessButton(int numOfChess, int index)
  * **************************************************
  * CopyRight 2023 by 黄辰宇
  * **************************************************/
-void Shop::createInitChessButton()
+void Shop::createInitialChessButton()
 {
     // 产生随机数种子
     std::default_random_engine randomEngine;
@@ -321,6 +321,29 @@ void Shop::createMoneyLabel()
     labelMoney->setPosition(spriteMoneyLabel->getPosition());
     labelMoney->setTextColor(Color4B::BLACK);
     CTGScene::getLayer()->addChild(labelMoney, 3);      // z 值为 3
+}
+
+/****************************************************
+ * 功能：创建出售区域
+ * 作者：黄辰宇
+ * 时间：2023年12月27日
+ * **************************************************
+ * CopyRight 2023 by 黄辰宇
+ * **************************************************/
+void Shop::createSellSprite()
+{
+    std::string sellSpritePicPath = "SellOrigin.png";
+    spriteSellOrigin = Sprite::create(sellSpritePicPath);
+    spriteSellOrigin->setPosition(origin + Vec2(visibleSize.width * 0.925f, visibleSize.height * 0.925f));
+    spriteSellOrigin->setOpacity(150);                         // 透明度 150
+    CTGScene::getLayer()->addChild(spriteSellOrigin, 2);    // z 值为 2
+
+    // 标签文字：出售
+    std::string words = ConfigController::getInstance()->getCNByID(WORDS_SELL);
+    labelSellOrigin = Label::createWithTTF(words, "fonts/simkai.ttf", 32.0f);
+    labelSellOrigin->setPosition(spriteSellOrigin->getPosition());
+    labelSellOrigin->setTextColor(Color4B::BLACK);
+    CTGScene::getLayer()->addChild(labelSellOrigin, 3); // z 值为 3
 }
 
 /****************************************************

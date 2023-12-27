@@ -36,4 +36,8 @@
     <key>1009</key>
     <string>金币：</string>
   </dict>
+  <dict>
+    <key>1010</key>
+    <string>出售</string>
+  </dict>
 </plist>

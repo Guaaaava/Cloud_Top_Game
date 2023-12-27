@@ -16,6 +16,7 @@ USING_NS_CC;			// 相当于 using namespace cocos2d;
 #define WORDS_LEVEL_1	1007	// “级”编码
 #define WORDS_LEVEL_2	1008	// "经验："编码
 #define WORDS_MONEY		1009	// "金币："编码
+#define WORDS_SELL		1010	// “出售”编码
 
 // 图片路径编码，下标从1开始
 const int MAX_NUM_KEY = 10;
