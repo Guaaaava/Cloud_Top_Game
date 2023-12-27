@@ -4,141 +4,141 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>1_LightningMage_Run</key>
+            <key>1_WandererMagican_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.484375,0.0390625}</string>
+                <string>{0.225,0.194444}</string>
                 <key>spriteOffset</key>
-                <string>{-3,-31}</string>
+                <string>{-34,-5}</string>
+                <key>spriteSize</key>
+                <string>{46,64}</string>
+                <key>spriteSourceSize</key>
+                <string>{120,108}</string>
+                <key>textureRect</key>
+                <string>{{65,135},{46,64}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>2_WandererMagican_Run</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.291667,0.194444}</string>
+                <key>spriteOffset</key>
+                <string>{-29,-5}</string>
+                <key>spriteSize</key>
+                <string>{56,64}</string>
+                <key>spriteSourceSize</key>
+                <string>{120,108}</string>
+                <key>textureRect</key>
+                <string>{{69,69},{56,64}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>3_WandererMagican_Run</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.391667,0.185185}</string>
+                <key>spriteOffset</key>
+                <string>{-22,-6}</string>
+                <key>spriteSize</key>
+                <string>{66,62}</string>
+                <key>spriteSourceSize</key>
+                <string>{120,108}</string>
+                <key>textureRect</key>
+                <string>{{1,69},{66,62}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>4_WandererMagican_Run</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.45,0.194444}</string>
+                <key>spriteOffset</key>
+                <string>{-18,-4}</string>
+                <key>spriteSize</key>
+                <string>{68,66}</string>
+                <key>spriteSourceSize</key>
+                <string>{120,108}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{68,66}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>5_WandererMagican_Run</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.203704}</string>
+                <key>spriteOffset</key>
+                <string>{-5,-4}</string>
+                <key>spriteSize</key>
+                <string>{54,66}</string>
+                <key>spriteSourceSize</key>
+                <string>{120,108}</string>
+                <key>textureRect</key>
+                <string>{{71,1},{54,66}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>6_WandererMagican_Run</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.558333,0.194444}</string>
+                <key>spriteOffset</key>
+                <string>{7,-5}</string>
                 <key>spriteSize</key>
                 <string>{40,64}</string>
                 <key>spriteSourceSize</key>
-                <string>{128,128}</string>
+                <string>{120,108}</string>
                 <key>textureRect</key>
-                <string>{{133,129},{40,64}}</string>
+                <string>{{49,201},{40,64}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>2_LightningMage_Run</key>
+            <key>7_WandererMagican_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.460938,0.0390625}</string>
+                <string>{0.675,0.185185}</string>
                 <key>spriteOffset</key>
-                <string>{8,-31}</string>
+                <string>{18,-6}</string>
                 <key>spriteSize</key>
-                <string>{80,64}</string>
+                <string>{48,62}</string>
                 <key>spriteSourceSize</key>
-                <string>{128,128}</string>
+                <string>{120,108}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{80,64}}</string>
+                <string>{{1,133},{48,62}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>3_LightningMage_Run</key>
+            <key>8_WandererMagican_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.476563,0.0390625}</string>
+                <string>{0.725,0.185185}</string>
                 <key>spriteOffset</key>
-                <string>{1,-32}</string>
+                <string>{20,-5}</string>
                 <key>spriteSize</key>
-                <string>{64,62}</string>
+                <string>{46,64}</string>
                 <key>spriteSourceSize</key>
-                <string>{128,128}</string>
+                <string>{120,108}</string>
                 <key>textureRect</key>
-                <string>{{67,1},{64,62}}</string>
+                <string>{{1,183},{46,64}}</string>
                 <key>textureRotated</key>
                 <false/>
-            </dict>
-            <key>4_LightningMage_Run</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.484375,0.046875}</string>
-                <key>spriteOffset</key>
-                <string>{-11,-32}</string>
-                <key>spriteSize</key>
-                <string>{60,62}</string>
-                <key>spriteSourceSize</key>
-                <string>{128,128}</string>
-                <key>textureRect</key>
-                <string>{{129,65},{60,62}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>5_LightningMage_Run</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.492188,0.046875}</string>
-                <key>spriteOffset</key>
-                <string>{-11,-31}</string>
-                <key>spriteSize</key>
-                <string>{58,64}</string>
-                <key>spriteSourceSize</key>
-                <string>{128,128}</string>
-                <key>textureRect</key>
-                <string>{{67,131},{58,64}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>6_LightningMage_Run</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.484375,0.03125}</string>
-                <key>spriteOffset</key>
-                <string>{3,-31}</string>
-                <key>spriteSize</key>
-                <string>{60,64}</string>
-                <key>spriteSourceSize</key>
-                <string>{128,128}</string>
-                <key>textureRect</key>
-                <string>{{67,65},{60,64}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>7_LightningMage_Run</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.484375,0.03125}</string>
-                <key>spriteOffset</key>
-                <string>{-20,-31}</string>
-                <key>spriteSize</key>
-                <string>{80,64}</string>
-                <key>spriteSourceSize</key>
-                <string>{128,128}</string>
-                <key>textureRect</key>
-                <string>{{1,83},{80,64}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>8_LightningMage_Run</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.492188,0.0390625}</string>
-                <key>spriteOffset</key>
-                <string>{-19,-31}</string>
-                <key>spriteSize</key>
-                <string>{62,64}</string>
-                <key>spriteSourceSize</key>
-                <string>{128,128}</string>
-                <key>textureRect</key>
-                <string>{{133,1},{62,64}}</string>
-                <key>textureRotated</key>
-                <true/>
             </dict>
         </dict>
         <key>metadata</key>
@@ -150,13 +150,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>LightningMage_Run.png</string>
+            <string>WandererMagican_Run.png</string>
             <key>size</key>
-            <string>{198,190}</string>
+            <string>{126,248}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c08d4b5b5c332a4c2a69db9495f530d8:7733b305fbc5ca64e7be46d2e27069c5:a5b2b484d2df6432a038d3a3b2da25b9$</string>
+            <string>$TexturePacker:SmartUpdate:dc5909ccd9061d2553b367c8abd09767:f29daf44166d65302e7c6c80d64cb115:65024aeab045060d998dedd9d2e0f183$</string>
             <key>textureFileName</key>
-            <string>LightningMage_Run.png</string>
+            <string>WandererMagican_Run.png</string>
         </dict>
     </dict>
 </plist>

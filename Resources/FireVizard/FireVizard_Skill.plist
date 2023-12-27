@@ -4,141 +4,141 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>1_LightningMage_Run</key>
+            <key>1_FireVizard_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.484375,0.0390625}</string>
+                <string>{0.372093,0.277778}</string>
                 <key>spriteOffset</key>
-                <string>{-3,-31}</string>
+                <string>{-17,-6}</string>
                 <key>spriteSize</key>
-                <string>{40,64}</string>
+                <string>{27,66}</string>
                 <key>spriteSourceSize</key>
-                <string>{128,128}</string>
+                <string>{129,162}</string>
                 <key>textureRect</key>
-                <string>{{133,129},{40,64}}</string>
+                <string>{{164,212},{27,66}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>2_LightningMage_Run</key>
+            <key>2_FireVizard_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.460938,0.0390625}</string>
+                <string>{0.310078,0.277778}</string>
                 <key>spriteOffset</key>
-                <string>{8,-31}</string>
+                <string>{-17,-6}</string>
                 <key>spriteSize</key>
-                <string>{80,64}</string>
+                <string>{49,66}</string>
                 <key>spriteSourceSize</key>
-                <string>{128,128}</string>
+                <string>{129,162}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{80,64}}</string>
+                <string>{{164,161},{49,66}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>3_LightningMage_Run</key>
+            <key>3_FireVizard_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.476563,0.0390625}</string>
+                <string>{0.286822,0.277778}</string>
                 <key>spriteOffset</key>
-                <string>{1,-32}</string>
+                <string>{-11,-9}</string>
                 <key>spriteSize</key>
-                <string>{64,62}</string>
+                <string>{77,60}</string>
                 <key>spriteSourceSize</key>
-                <string>{128,128}</string>
+                <string>{129,162}</string>
                 <key>textureRect</key>
-                <string>{{67,1},{64,62}}</string>
+                <string>{{102,161},{77,60}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>4_FireVizard_Skill</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.271318,0.283951}</string>
+                <key>spriteOffset</key>
+                <string>{-1,-4}</string>
+                <key>spriteSize</key>
+                <string>{99,70}</string>
+                <key>spriteSourceSize</key>
+                <string>{129,162}</string>
+                <key>textureRect</key>
+                <string>{{1,159},{99,70}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>4_LightningMage_Run</key>
+            <key>5_FireVizard_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.484375,0.046875}</string>
+                <string>{0.271318,0.277778}</string>
                 <key>spriteOffset</key>
-                <string>{-11,-32}</string>
+                <string>{7,-4}</string>
                 <key>spriteSize</key>
-                <string>{60,62}</string>
+                <string>{115,70}</string>
                 <key>spriteSourceSize</key>
-                <string>{128,128}</string>
+                <string>{129,162}</string>
                 <key>textureRect</key>
-                <string>{{129,65},{60,62}}</string>
+                <string>{{1,87},{115,70}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>5_LightningMage_Run</key>
+            <key>6_FireVizard_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.492188,0.046875}</string>
+                <string>{0.255814,0.283951}</string>
                 <key>spriteOffset</key>
-                <string>{-11,-31}</string>
+                <string>{6,-2}</string>
                 <key>spriteSize</key>
-                <string>{58,64}</string>
+                <string>{117,74}</string>
                 <key>spriteSourceSize</key>
-                <string>{128,128}</string>
+                <string>{129,162}</string>
                 <key>textureRect</key>
-                <string>{{67,131},{58,64}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>6_LightningMage_Run</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.484375,0.03125}</string>
-                <key>spriteOffset</key>
-                <string>{3,-31}</string>
-                <key>spriteSize</key>
-                <string>{60,64}</string>
-                <key>spriteSourceSize</key>
-                <string>{128,128}</string>
-                <key>textureRect</key>
-                <string>{{67,65},{60,64}}</string>
+                <string>{{120,85},{117,74}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>7_LightningMage_Run</key>
+            <key>7_FireVizard_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.484375,0.03125}</string>
+                <string>{0.24031,0.277778}</string>
                 <key>spriteOffset</key>
-                <string>{-20,-31}</string>
+                <string>{6,2}</string>
                 <key>spriteSize</key>
-                <string>{80,64}</string>
+                <string>{117,82}</string>
                 <key>spriteSourceSize</key>
-                <string>{128,128}</string>
+                <string>{129,162}</string>
                 <key>textureRect</key>
-                <string>{{1,83},{80,64}}</string>
+                <string>{{120,1},{117,82}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>8_LightningMage_Run</key>
+            <key>8_FireVizard_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.492188,0.0390625}</string>
+                <string>{0.24031,0.283951}</string>
                 <key>spriteOffset</key>
-                <string>{-19,-31}</string>
+                <string>{5,3}</string>
                 <key>spriteSize</key>
-                <string>{62,64}</string>
+                <string>{117,84}</string>
                 <key>spriteSourceSize</key>
-                <string>{128,128}</string>
+                <string>{129,162}</string>
                 <key>textureRect</key>
-                <string>{{133,1},{62,64}}</string>
+                <string>{{1,1},{117,84}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
         </dict>
         <key>metadata</key>
@@ -150,13 +150,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>LightningMage_Run.png</string>
+            <string>FireVizard_Skill.png</string>
             <key>size</key>
-            <string>{198,190}</string>
+            <string>{238,240}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c08d4b5b5c332a4c2a69db9495f530d8:7733b305fbc5ca64e7be46d2e27069c5:a5b2b484d2df6432a038d3a3b2da25b9$</string>
+            <string>$TexturePacker:SmartUpdate:987fd8bad23a55cd9a9f3e4b10ef1113:9a0292fc39b3275f76a74b9f558f7df3:e8c11f88b2866b8ee798acdc7ce933ad$</string>
             <key>textureFileName</key>
-            <string>LightningMage_Run.png</string>
+            <string>FireVizard_Skill.png</string>
         </dict>
     </dict>
 </plist>
