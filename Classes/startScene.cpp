@@ -8,10 +8,6 @@
 
 USING_NS_CC;
 
-#define WORDS_GAME_NAME 1001	// “金铲铲之战”编码
-#define WORDS_GAME_START 1002	//“开始游戏”编码
-#define WORDS_GAME_CLOSE 1003   //“退出游戏”编码
-
 /*************
 * 函数名称:createScene()
 * 函数参数:无
@@ -52,7 +48,7 @@ bool STARTScene::init()
 	auto visibleSize = Director::getInstance()->getVisibleSize();//获取可视区域大小
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();	 //获取可视区域原点(左下角)
 
-	/* 1.白色背景层 */
+	/* 1.黑色背景层 */
 	auto layer = LayerColor::create(Color4B::BLACK);//设置背景层颜色
 	layer->setPosition(origin);					    //设置背景层位置
 	layer->setContentSize(visibleSize);			    //设置背景层大小
@@ -76,11 +72,11 @@ bool STARTScene::init()
 		problemLoading("fonts / Genshin.ttf");
 	}
 	else {
-		JDSTARLabel->setAnchorPoint(Vec2::ANCHOR_TOP_LEFT);//锚点设置
+		JDSTARLabel->setAnchorPoint(Vec2::ANCHOR_TOP_LEFT);	//锚点设置
 
-		JDSTARLabel->setPosition(JDSTAR_pos);//位置设置
+		JDSTARLabel->setPosition(JDSTAR_pos);				//位置设置
 
-		layer->addChild(JDSTARLabel, JDSTAR_zOrder);//加入层中
+		layer->addChild(JDSTARLabel, JDSTAR_zOrder);		//加入层中
 	}
 
 	/* 3.金铲铲之战标签 */
@@ -114,67 +110,131 @@ bool STARTScene::init()
 	Vector<MenuItem*>MenuItems;
 
 	/* 4.1开始游戏菜单项 */
-	const Vec2 startItem_pos(GCCLabel->getPosition() + Vec2(0, -60 - GCCLabel->getContentSize().height));//位置
+	const Vec2 startGameItem_pos(GCCLabel->getPosition() + Vec2(0, -60 - GCCLabel->getContentSize().height));//位置
 	/**********
 	* 类型:菜单项
-	* 内容:开始游戏
-	* 位置:startItem_pos
+	* 内容:训练模式
+	* 位置:trainingModeItem_pos
 	**********/
 	/* 创建图片菜单项 */
-	std::string gameStart = ConfigController::getInstance()->getCNByID(WORDS_GAME_START);
-	auto startItem = creatMenuItem(gameStart, CC_CALLBACK_1(STARTScene::menuStartCallback, this));
-	startItem->setPosition(startItem_pos);				  //位置设置
-	MenuItems.pushBack(startItem);
+	std::string gemeStart = ConfigController::getInstance()->getCNByID(WORDS_GAME_START);
+	auto startGame = creatMenuItem(gemeStart, CC_CALLBACK_1(STARTScene::menuStartCallback, this));
+	startGame->setPosition(startGameItem_pos);//位置设置
+	MenuItems.pushBack(startGame);	  //加入菜单
 
 	/* 4.2退出游戏菜单项 */
-	const Vec2 closeItem_pos(startItem->getPosition() + Vec2(0, -20 - startItem->getContentSize().height));//位置
+	const Vec2 closeGame_pos(startGame->getPosition() + Vec2(0,-20-startGame->getContentSize().height));//位置
 	/**********
 	* 类型:菜单项
-	* 内容:退出游戏
-	* 位置:closeItem_pos
+	* 内容:联机模式
+	* 位置:onlineModeItem_pos
 	**********/
+	/* 创建图片菜单项 */
 	std::string gameClose = ConfigController::getInstance()->getCNByID(WORDS_GAME_CLOSE);
-	auto closeItem = creatMenuItem(gameClose, CC_CALLBACK_1(STARTScene::menuCloseCallback, this));
-	closeItem->setPosition(closeItem_pos);				  //位置设置
-	MenuItems.pushBack(closeItem);
-
+	auto closeGame = creatMenuItem(gameClose, CC_CALLBACK_1(STARTScene::menuCloseCallback, this));
+	closeGame->setPosition(closeGame_pos);		//位置设置
+	MenuItems.pushBack(closeGame);				//加入菜单
+	
 	auto menu = Menu::createWithArray(MenuItems);//创建菜单
 	menu->setPosition(Vec2::ZERO);				 //设置菜单位置
 	layer->addChild(menu);						 //将菜单加入场景
-	
+
+	/* 5.背景音效 */
+
+	/**********
+	* 类型:音乐
+	* 内容:startMusic
+	**********/
+	auto audio = SimpleAudioEngine::getInstance();
+	audio->playBackgroundMusic("startScene/Lonely Warrior.mp3", true);
+	if (audio == nullptr) {
+		problemLoading("startScene/Lonely Warrior.mp3");
+	}
+
+
+	/* 6.静音按钮 */
+	const Vec2 silenceBtn_pos(origin + visibleSize - Vec2(20, 20));//位置
+	/**********
+	* 类型:开关菜单项
+	* 内容:静音按钮
+	**********/
+	this->musicON = true;//默认播放音乐
+	auto bgm = SimpleAudioEngine::getInstance();
+	bgm->playBackgroundMusic("startScene/startMusic.mp3", true);
+	auto silenceBtn = Button::create("startScene/silenceBtnON.png");
+	silenceBtn->setAnchorPoint(Vec2::ANCHOR_TOP_RIGHT);//设置锚点
+	silenceBtn->setPosition(silenceBtn_pos);		   //设置位置
+	layer->addChild(silenceBtn);					   //加入层
+	/* 回调函数 */
+	silenceBtn->addClickEventListener([this](cocos2d::Ref* pSender) {
+		Button* Btn = dynamic_cast<Button*>(pSender);
+		if (musicON == true) {
+			/* 切换状态 */
+			musicON = false;
+			/* 切换图标 */
+			Btn->loadTextures("startScene/silenceBtnOFF.png", "startScene/silenceBtnOFF.png", "startScene/silenceBtnOFF.png");
+			/* 暂停音乐 */
+			auto audio = SimpleAudioEngine::getInstance();
+			audio->pauseBackgroundMusic();
+
+		}//正在播放
+		else {
+			/* 切换状态 */
+			musicON = true;
+			/* 切换图标 */
+			Btn->loadTextures("startScene/silenceBtnON.png", "startScene/silenceBtnON.png", "startScene/silenceBtnON.png");
+			/* 恢复音乐 */
+			auto audio = SimpleAudioEngine::getInstance();
+			audio->resumeBackgroundMusic();
+		}//已经暂停
+		});
+
 	return true;
 }
 
+/*************
+* 函数名称:creatMenuItem()
+* 函数参数:std::string name:菜单项内容
+*          const ccMenuCallback& callback:菜单项回调函数
+* 函数功能:创建一个通用菜单项
+* 返回值  :指向菜单项的指针
+*************/
 MenuItemImage* STARTScene::creatMenuItem(std::string name, const ccMenuCallback& callback)
 {
 	/* 创建一个通用图片菜单项 */
-	auto item = MenuItemImage::create("BtnNormal.png", "BtnSelected.png", callback);
+	auto item = MenuItemImage::create("startScene/BtnNormal.png", "startScene/BtnSelected.png", callback);
 	if (item == nullptr) {
-	
+		problemLoading("startScene / BtnNormal.png");
 	}
 	else {
 		/* 加入标签名称 */
 		auto label = Label::createWithTTF(name, "fonts/TJL.ttf", 32);//创建标签
-		label->setPosition(item->getContentSize() / 2);//设置位置为菜单项中央
-		item->addChild(label);//加入标签
+		if (label == nullptr) {
+			problemLoading("fonts/TJL.ttf");
+		}
+		else {
+			label->setPosition(item->getContentSize() / 2);//设置位置为菜单项中央
+			item->addChild(label);//加入标签
+		}
 	}
 
 	return item;
 }
 
 /*************
-* 函数名称:menuStartCallback()
+* 函数名称:menuTrainingModeCallback()
 * 函数参数:cocos2d::Ref* pSender
-* 函数功能:开始游戏按钮的回调函数，进入下一个界面
+* 函数功能:训练模式按钮的回调函数，进入训练模式场景
 * 返回值  :无
 *************/
 void STARTScene::menuStartCallback(cocos2d::Ref* pSender)
 {
-	auto nextScene = CTGScene::create();
-
-	Director::getInstance()->pushScene(TransitionFade::create(0.5, nextScene, Color3B(0, 255, 255)));
-
-	return;
+	auto audio = SimpleAudioEngine::getInstance();
+	audio->stopBackgroundMusic();
+	/* 获取下一个场景 */
+	auto nextScene = MAINScene::create();
+	/* 切换至下一个场景 */
+	Director::getInstance()->replaceScene(TransitionFade::create(0.5, nextScene, Color3B::WHITE));
 }
 
 /*************

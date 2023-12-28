@@ -17,7 +17,10 @@ using namespace ui;
 
 #include"ConfigController.h"
 
-#include"CTGScene.h"
+#include"MAINScene.h"
+
+#include "SimpleAudioEngine.h"
+using namespace CocosDenshion;
 
 class STARTScene : public cocos2d::Scene
 {
@@ -32,9 +35,11 @@ public:
 	static MenuItemImage* creatMenuItem(std::string name, const ccMenuCallback& callback);//创建通用菜单项
 
 private:
-	void menuStartCallback(cocos2d::Ref* pSender);
+	bool musicON;//记录音乐播放状态
 
-	void menuCloseCallback(cocos2d::Ref* pSender);
+	void menuStartCallback(cocos2d::Ref* pSender);//开始按钮的回调
+
+	void menuCloseCallback(cocos2d::Ref* pSender);//退出按钮的回调
 };
 
 #endif //_START_SCENE_H
