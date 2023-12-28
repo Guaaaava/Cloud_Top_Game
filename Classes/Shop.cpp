@@ -24,7 +24,7 @@ bool Shop::init()
     createMoneyLabel();             // 金币标签
     createSellSprite();             // 出售区域精灵
 
-    initAllChess();                 // 初始化牌库
+    initAllChessPrice();            // 初始化所有英雄价格
 
     createInitialChessButton();     // 开始的卡牌按钮
     getChessPrice();                // 获取当前卡牌价格
@@ -36,27 +36,27 @@ bool Shop::init()
 }
 
 /****************************************************
- * 功能：初始化牌库（Hero创建）
+ * 功能：初始化牌库价格
  * 作者：黄辰宇
  * 时间：2023年12月24日
  * **************************************************
  * CopyRight 2023 by 黄辰宇
  * **************************************************/
-void Shop::initAllChess()
+void Shop::initAllChessPrice()
 {
     for (int i = 1; i <= NUM_CHESS; i++)
     {
         if (i <= 5)
-            allChess[i] = 1;
+            allChessPrice[i] = 1;
         else if (i > 5 && i <= 8)
-            allChess[i] = 2;
+            allChessPrice[i] = 2;
         else
-            allChess[i] = 3;
+            allChessPrice[i] = 3;
     }
 }
 
 /****************************************************
- * 功能：获取当前卡牌价格（从Hero中get）
+ * 功能：获取当前卡牌价格
  * 作者：黄辰宇
  * 时间：2023年12月23日
  * **************************************************
@@ -66,7 +66,7 @@ void Shop::getChessPrice()
 {
     for (int i = 1; i <= NUM_CHESS_SHOP; i++)
     {
-        chessPrice[i] = chess[i];
+        chessPrice[i] = allChessPrice[i];
     }
 }
 
@@ -110,14 +110,14 @@ void Shop::createChessButton(int numOfChess, int index)
                 chessButton[numOfChess]->removeFromParentAndCleanup(true);
                 chessButton[numOfChess] = nullptr;
 
-                // 花费金币（从Hero里get）
-                money -= allChess[index];
+                // 花费金币
+                money -= allChessPrice[index];
 
                 // 更新按钮禁用状态
                 updateButtonState();
 
                 // 更新金币标签
-                labelMoney->setString(getMoneyLabelStr());
+                updateMoneyLabel();
 
                 // 在棋盘上生成英雄
                 GameController::getInstance()->createHeroInChessBoard(index);
@@ -164,7 +164,6 @@ void Shop::createInitialChessButton()
             r2 = (u2(randomEngine) % 2 + 9);    // 9~10是3费
 
         // 创建并加入场景中
-        chess[num] = allChess[r2];
         createChessButton(num, r2);
         CTGScene::getLayer()->addChild(chessButton[num], 2);    // z 值为 2
 
@@ -213,8 +212,8 @@ void Shop::createLevelUpButton()
                     // 更新按钮禁用状态
                     updateButtonState();
 
-                    labelMoney->setString(getMoneyLabelStr());
-                    labelLevel->setString(getLevelLabelStr());  // 更新标签
+                    updateLevelLabel();
+                    updateMoneyLabel();  // 更新标签
 
                     // 根据等级增加可上场英雄数
                 }
@@ -267,7 +266,7 @@ void Shop::createRefreshShopButton()
                     // 更新按钮禁用状态
                     updateButtonState();
 
-                    labelMoney->setString(getMoneyLabelStr());     // 更新标签
+                    updateMoneyLabel();     // 更新标签
                 }
                 break;
             default:
@@ -293,7 +292,19 @@ void Shop::createLevelLabel()
     // 标签文字如 
     //               2级
     //            当前：4/10
-    std::string words = getLevelLabelStr();
+    std::string words_1 = "";
+    std::string words_2 = "";
+    std::string words_3 = "";
+
+    words_1 += ('0' + level);
+
+    if (expr >= 10) words_2 += ('0' + expr / 10);
+    words_2 += ('0' + expr % 10);
+
+    if (EXP_LEVEL[level + 1] >= 10) words_3 += ('0' + EXP_LEVEL[level + 1] / 10);
+    words_3 += ('0' + EXP_LEVEL[level + 1] % 10);
+
+    std::string words = "    " + words_1 + words_level_1 + "\n" + words_level_2 + words_2 + "/" + words_3;
     labelLevel = Label::createWithTTF(words, "fonts/simkai.ttf", 24.0f);
     labelLevel->setPosition(spriteLevelLabel->getPosition());
     labelLevel->setTextColor(Color4B::BLACK);
@@ -316,7 +327,14 @@ void Shop::createMoneyLabel()
 
     // 标签文字如 
     //               金币：10
-    std::string words = getMoneyLabelStr();
+    std::string words_1 = "";
+
+    // 最大金币数：999
+    if (money >= 100) words_1 += ('0' + money / 100);
+    if (money >= 10) words_1 += ('0' + (money % 100) / 10);
+    words_1 += ('0' + money % 10);
+
+    std::string words = words_money + words_1;
     labelMoney = Label::createWithTTF(words, "fonts/simkai.ttf", 32.0f);
     labelMoney->setPosition(spriteMoneyLabel->getPosition());
     labelMoney->setTextColor(Color4B::BLACK);
@@ -335,7 +353,7 @@ void Shop::createSellSprite()
     std::string sellSpritePicPath = "SellOrigin.png";
     spriteSellOrigin = Sprite::create(sellSpritePicPath);
     spriteSellOrigin->setPosition(origin + Vec2(visibleSize.width * 0.925f, visibleSize.height * 0.925f));
-    spriteSellOrigin->setOpacity(150);                         // 透明度 150
+    spriteSellOrigin->setOpacity(80);                         // 透明度 80
     CTGScene::getLayer()->addChild(spriteSellOrigin, 2);    // z 值为 2
 
     // 标签文字：出售
@@ -374,13 +392,13 @@ Vec2 Shop::getChessPosition(const int numofChess)
 }
 
 /****************************************************
- * 功能：得到等级标签更新后的内容
+ * 功能：更新等级标签
  * 作者：黄辰宇
- * 时间：2023年12月24日
+ * 时间：2023年12月28日
  * **************************************************
  * CopyRight 2023 by 黄辰宇
  * **************************************************/
-std::string Shop::getLevelLabelStr()
+void Shop::updateLevelLabel()
 {
     std::string words = "";
 
@@ -401,17 +419,17 @@ std::string Shop::getLevelLabelStr()
 
     words = "    " + words_1 + words_level_1 + "\n" + words_level_2 + words_2 + "/" + words_3;
 
-    return words;
+    labelLevel->setString(words);
 }
 
 /****************************************************
- * 功能：得到金币标签更新后的内容
+ * 功能：更新金币标签
  * 作者：黄辰宇
- * 时间：2023年12月24日
+ * 时间：2023年12月28日
  * **************************************************
  * CopyRight 2023 by 黄辰宇
  * **************************************************/
-std::string Shop::getMoneyLabelStr()
+void Shop::updateMoneyLabel()
 {
     std::string words = "";
 
@@ -426,7 +444,48 @@ std::string Shop::getMoneyLabelStr()
 
     words = words_money + words_1;
 
-    return words;
+    labelMoney->setString(words);
+}
+
+/****************************************************
+ * 功能：更新按钮禁用状态（不能用在回调函数中？！）
+ * 注意：每次花钱以后都要进行更新
+ * 作者：黄辰宇
+ * 时间：2023年12月24日
+ * **************************************************
+ * CopyRight 2023 by 黄辰宇
+ * **************************************************/
+void Shop::updateButtonState()
+{
+    if (buttonLevelUp == nullptr || buttonRefreshShop == nullptr)
+        return;
+
+    // 升级按钮
+    if (level == MAX_LEVEL || money - EXP_ADD_ONCE < 0) // 满级或没钱
+        buttonLevelUp->setEnabled(false);   // 禁用按钮
+    else
+        buttonLevelUp->setEnabled(true);
+
+    // 刷新商店按钮
+    if (money - REFRESH_ONCE < 0)   // 没钱
+        buttonRefreshShop->setEnabled(false);   // 禁用按钮
+    else
+        buttonRefreshShop->setEnabled(true);
+
+    // 卡牌按钮
+    for (int i = 1; i <= NUM_CHESS_SHOP; i++)   // 看看哪个英雄买不起
+    {
+        if (money - chessPrice[i] < 0)  // 第i张卡牌买不起
+        {
+            if (chessButton[i] != nullptr)
+                chessButton[i]->setEnabled(false);  // 设置禁用
+        }
+        else
+        {
+            if (chessButton[i] != nullptr)
+                chessButton[i]->setEnabled(true);
+        }
+    }
 }
 
 /****************************************************
@@ -499,7 +558,6 @@ void Shop::refreshShop()
         }
 
         // 更新商店卡牌和卡牌按钮并加入场景中
-        chess[num] = allChess[r2];
         createChessButton(num, r2);
         CTGScene::getLayer()->addChild(chessButton[num], 2);    // z 值为 2
 
@@ -510,42 +568,18 @@ void Shop::refreshShop()
 }
 
 /****************************************************
- * 功能：更新按钮禁用状态（不能用在回调函数中？！）
- * 注意：每次花钱以后都要进行更新
+ * 功能：获取编号为idx的英雄价格
  * 作者：黄辰宇
  * 时间：2023年12月24日
  * **************************************************
  * CopyRight 2023 by 黄辰宇
  * **************************************************/
-void Shop::updateButtonState()
+int Shop::getHeroPrice(int idxOfHero)
 {
-    if (buttonLevelUp == nullptr || buttonRefreshShop == nullptr)
-        return;
-
-    // 升级按钮
-    if (level == MAX_LEVEL || money - EXP_ADD_ONCE < 0) // 满级或没钱
-        buttonLevelUp->setEnabled(false);   // 禁用按钮
-    else
-        buttonLevelUp->setEnabled(true);
-
-    // 刷新商店按钮
-    if (money - REFRESH_ONCE < 0)   // 没钱
-        buttonRefreshShop->setEnabled(false);   // 禁用按钮
-    else
-        buttonRefreshShop->setEnabled(true);
-
-    // 卡牌按钮
-    for (int i = 1; i <= NUM_CHESS_SHOP; i++)   // 看看哪个英雄买不起
+    if (idxOfHero <= 0 || idxOfHero > NUM_CHESS)
     {
-        if (money - chessPrice[i] < 0)  // 第i张卡牌买不起
-        {
-            if (chessButton[i] != nullptr)
-                chessButton[i]->setEnabled(false);  // 设置禁用
-        }
-        else
-        {
-            if (chessButton[i] != nullptr)
-                chessButton[i]->setEnabled(true);
-        }
+        CCLOG("英雄编号越界，获取价格失败!\n");
+        return -1;
     }
+    return allChessPrice[idxOfHero];
 }

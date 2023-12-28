@@ -30,11 +30,11 @@ private:
 
 	static LayerColor* layer;	// 记录背景层（静态成员）
 
-	Sprite* touchingSprite;
+	Sprite* touchingSprite;		// 被选中的英雄
 
 	virtual bool onTouchBegan(Touch* touch, Event* event);	// 按下鼠标的回调
 	virtual void onTouchMoved(Touch* touch, Event* event);	// 移动鼠标的回调
 	virtual void onTouchEnded(Touch* touch, Event* event);	// 释放鼠标的回调
 
-	Sprite* judgePointInSprite(Point pnt);	// 判断触摸点是否在已有精灵区域内，是则返回该精灵，否则返回nullptr
+	Sprite* judgePointInSprite(Point pnt);	// 判断触摸点是否在已有英雄区域内，是则返回该精灵，否则返回nullptr
 };

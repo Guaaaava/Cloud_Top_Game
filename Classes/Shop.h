@@ -30,7 +30,7 @@ public:
 	// 初始化商店对象（重写）
 	virtual bool init();
 
-	void initAllChess();				// 初始化牌库
+	void initAllChessPrice();			// 初始化所有英雄价格
 	void getChessPrice();				// 获取当前卡牌价格
 
 	// 创建通用的卡牌按钮
@@ -46,18 +46,21 @@ public:
 	// 获取从左到右第numofChess张卡牌中心位置
 	Vec2 getChessPosition(const int numofChess);
 
-	std::string getLevelLabelStr();		// 得到等级标签更新后的内容
-	std::string getMoneyLabelStr();		// 得到金币标签更新后的内容
+	void updateLevelLabel();		// 更新等级标签
+	void updateMoneyLabel();		// 更新金币标签
+	void updateButtonState();		// 更新按钮禁用状态
 
 	void transformExpToLevel();			// 经验转化为等级
 	void refreshShop();					// （根据等级）刷新商店
-	
-	void updateButtonState();			// 更新按钮禁用状态
 
-	Rect getSellOrigin() { return spriteSellOrigin->getBoundingBox(); };	// 获取出售区域碰撞箱
+	int getHeroPrice(int idxOfHero);	// 获取编号为idx的英雄价格
+	Sprite* getSellOrigin() { return spriteSellOrigin; };	// 获取出售区域碰撞箱
 	int getMoney() { return money; };	// 获取当前金币
 	int getExp() { return expr; };		// 获取当前经验
 	int getLevel() { return level; };	// 获取当前等级
+
+	void addMoney(int moneyAdded) { money += moneyAdded; };	// 加钱函数，记得加完后更新标签，更新按钮状态
+	void addExp(int expAdded) { expr += expAdded; };		// 加经验函数，记得加完后转化为等级，更新标签，更新按钮状态，改变可上场英雄数
 
 private:
 	const float shopStart_x = (Director::getInstance()->getVisibleSize()).width * 0.15f;			// 商店开始横坐标
@@ -82,9 +85,8 @@ private:
 	Sprite* spriteSellOrigin;			// 出售区域
 	Label* labelSellOrigin;				// 出售区域上标签
 
-	int allChess[NUM_CHESS + 5];			// 所有卡牌（init后不可改变）
+	int allChessPrice[NUM_CHESS + 5];	// 存所有英雄价格
 
-	int chess[NUM_CHESS_SHOP + 5];			// 存当前卡牌
 	Button* chessButton[NUM_CHESS_SHOP + 5];	// 存当前卡牌按钮
 	int chessPrice[NUM_CHESS_SHOP + 5];			// 存当前卡牌价格
 

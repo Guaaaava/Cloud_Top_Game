@@ -14,3 +14,24 @@ bool ChessBoard::init()
 
 	return true;
 }
+
+/****************************************************
+ * 功能：查询我方场上是否存在指定英雄，若存在则返回编号，否则返回-1
+ * 作者：黄辰宇
+ * 时间：2023年12月23日
+ * **************************************************
+ * CopyRight 2023 by 黄辰宇
+ * **************************************************/
+int ChessBoard::findHero(Sprite* hero)
+{
+	std::list<Sprite*>::iterator it;
+	for (it = myHeroes.begin(); it != myHeroes.end(); it++)
+	{
+		if ((*it) == hero)
+		{
+			return myHeroesIdx[hero];
+		}
+	}
+	
+	return -1;
+}

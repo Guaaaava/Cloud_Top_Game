@@ -31,13 +31,9 @@ bool CTGScene::init()
 	spriteChessBoard->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2));
 	layer->addChild(spriteChessBoard, 1);			// 对战场景 z 值为 1
 
-	// 商店？
+	// 商店、棋盘？
 	Shop* shop = GameController::getInstance()->getShop();
-
-	// // 测试
-	// test = Sprite::create("NormalRefreshShopButton.png");
-	// test->setPosition(origin + visibleSize / 2);
-	// layer->addChild(test, 2);
+	ChessBoard* chessBoard = GameController::getInstance()->getChessBoard();
 
 	// 创建触摸事件监听器
 	auto listener = EventListenerTouchOneByOne::create();
@@ -85,6 +81,19 @@ bool CTGScene::onTouchBegan(Touch* touch, Event* event)
 void CTGScene::onTouchMoved(Touch* touch, Event* event)
 {
 	touchingSprite->setPosition(touchingSprite->getPosition() + touch->getDelta());
+
+	// 出售区域样式变化
+	auto touchPoint = touch->getLocation();
+	auto spriteSellOrigin = GameController::getInstance()->getShop()->getSellOrigin();
+	auto rectSellOrigin = spriteSellOrigin->getBoundingBox();
+	if (rectSellOrigin.containsPoint(touchPoint))
+	{
+		spriteSellOrigin->setOpacity(255);
+	}
+	else
+	{
+		spriteSellOrigin->setOpacity(80);
+	}
 }
 
 /****************************************************
@@ -98,14 +107,14 @@ void CTGScene::onTouchMoved(Touch* touch, Event* event)
 void CTGScene::onTouchEnded(Touch* touch, Event* event)
 {
 	auto touchEndedPoint = touch->getLocation();
-	auto rectSellOrigin = GameController::getInstance()->getShop()->getSellOrigin();
+	auto spriteSellOrigin = GameController::getInstance()->getShop()->getSellOrigin();
+	auto rectSellOrigin = spriteSellOrigin->getBoundingBox();
 
 	if (rectSellOrigin.containsPoint(touchEndedPoint))
 	{
-		// 卖出英雄
-
-
-		// 维护商店、棋盘等集合
+		// 卖出英雄、维护商店、棋盘等集合，添加金币，更新标签，更新按钮状态
+		GameController::getInstance()->sellHero(touchingSprite);
+		touchingSprite = nullptr;	// 修改
 	}
 }
 
@@ -119,18 +128,19 @@ void CTGScene::onTouchEnded(Touch* touch, Event* event)
  * **************************************************/
 Sprite* CTGScene::judgePointInSprite(Point pnt)
 {
-	auto sprites = GameController::getInstance()->getChessBoard()->getMyHeroes();
-	if (sprites == nullptr)
+	auto myHeroes = GameController::getInstance()->getChessBoard()->getMyHeroes();
+	if (myHeroes == nullptr)
 	{
 		return nullptr;
 	}
 
-	for (int idx = 0; idx < sprites->size(); idx++)
+	std::list<Sprite*>::iterator it;
+	for (it = myHeroes->begin(); it != myHeroes->end(); it++)
 	{
-		auto rectOfSprite = sprites->at(idx)->getBoundingBox();
+		auto rectOfSprite = (*it)->getBoundingBox();
 		if (rectOfSprite.containsPoint(pnt))
 		{
-			return sprites->at(idx);
+			return (*it);
 		}
 	}
 
