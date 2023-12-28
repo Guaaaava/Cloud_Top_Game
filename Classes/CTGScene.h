@@ -60,4 +60,10 @@ private:
 	Knight* kni = Knight::create();
 	Kunoichi* kun = Kunoichi::create();
 	LightningMage* lig = LightningMage::create();
+	FireVizard* fir = FireVizard::create();
+	WandererMagican* wan = WandererMagican::create();
+	NinjaMonk* mon = NinjaMonk::create();
+	NinjaPeasant* pea = NinjaPeasant::create();
+	SamuraiCommander* com = SamuraiCommander::create();
+	Berserker* ber = Berserker::create();
 };

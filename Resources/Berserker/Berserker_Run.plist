@@ -4,139 +4,122 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>1_FireVizard_Run</key>
+            <key>1_Berserker_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.542636,0.108696}</string>
+                <string>{0.550725,0.0731707}</string>
                 <key>spriteOffset</key>
-                <string>{3,-9}</string>
+                <string>{-1,-7}</string>
                 <key>spriteSize</key>
-                <string>{39,62}</string>
+                <string>{51,64}</string>
                 <key>spriteSourceSize</key>
-                <string>{129,92}</string>
+                <string>{69,82}</string>
                 <key>textureRect</key>
-                <string>{{89,1},{39,62}}</string>
+                <string>{{1,69},{51,64}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>2_FireVizard_Run</key>
+            <key>2_Berserker_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.51938,0.108696}</string>
+                <string>{0.550725,0.0731707}</string>
                 <key>spriteOffset</key>
-                <string>{2,-10}</string>
+                <string>{0,-8}</string>
                 <key>spriteSize</key>
-                <string>{39,60}</string>
+                <string>{57,62}</string>
                 <key>spriteSourceSize</key>
-                <string>{129,92}</string>
+                <string>{69,82}</string>
                 <key>textureRect</key>
-                <string>{{149,65},{39,60}}</string>
+                <string>{{1,267},{57,62}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>3_FireVizard_Run</key>
+            <key>3_Berserker_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.534884,0.0978261}</string>
+                <string>{0.521739,0.0731707}</string>
                 <key>spriteOffset</key>
-                <string>{6,-8}</string>
+                <string>{2,-7}</string>
                 <key>spriteSize</key>
-                <string>{47,64}</string>
+                <string>{51,64}</string>
                 <key>spriteSourceSize</key>
-                <string>{129,92}</string>
+                <string>{69,82}</string>
                 <key>textureRect</key>
-                <string>{{40,1},{47,64}}</string>
+                <string>{{1,135},{51,64}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>4_FireVizard_Run</key>
+            <key>4_Berserker_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.542636,0.119565}</string>
+                <string>{0.521739,0.0731707}</string>
                 <key>spriteOffset</key>
-                <string>{1,-7}</string>
+                <string>{2,-6}</string>
                 <key>spriteSize</key>
-                <string>{37,66}</string>
+                <string>{53,66}</string>
                 <key>spriteSourceSize</key>
-                <string>{129,92}</string>
+                <string>{69,82}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{37,66}}</string>
+                <string>{{1,1},{53,66}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>5_FireVizard_Run</key>
+            <key>5_Berserker_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.527132,0.119565}</string>
+                <string>{0.565217,0.0609756}</string>
                 <key>spriteOffset</key>
-                <string>{-1,-9}</string>
+                <string>{1,-8}</string>
                 <key>spriteSize</key>
-                <string>{39,62}</string>
+                <string>{51,62}</string>
                 <key>spriteSourceSize</key>
-                <string>{129,92}</string>
+                <string>{69,82}</string>
                 <key>textureRect</key>
-                <string>{{108,65},{39,62}}</string>
+                <string>{{1,395},{51,62}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>6_FireVizard_Run</key>
+            <key>6_Berserker_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.503876,0.108696}</string>
+                <string>{0.623188,0.0731707}</string>
                 <key>spriteOffset</key>
-                <string>{-3,-10}</string>
+                <string>{2,-8}</string>
                 <key>spriteSize</key>
-                <string>{41,60}</string>
+                <string>{57,62}</string>
                 <key>spriteSourceSize</key>
-                <string>{129,92}</string>
+                <string>{69,82}</string>
                 <key>textureRect</key>
-                <string>{{65,67},{41,60}}</string>
+                <string>{{1,331},{57,62}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>7_FireVizard_Run</key>
+            <key>7_Berserker_Run</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.542636,0.119565}</string>
+                <string>{0.608696,0.0731707}</string>
                 <key>spriteOffset</key>
-                <string>{1,-9}</string>
+                <string>{3,-7}</string>
                 <key>spriteSize</key>
-                <string>{49,62}</string>
+                <string>{51,64}</string>
                 <key>spriteSourceSize</key>
-                <string>{129,92}</string>
+                <string>{69,82}</string>
                 <key>textureRect</key>
-                <string>{{1,69},{49,62}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>8_FireVizard_Run</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.527132,0.119565}</string>
-                <key>spriteOffset</key>
-                <string>{-4,-9}</string>
-                <key>spriteSize</key>
-                <string>{39,62}</string>
-                <key>spriteSourceSize</key>
-                <string>{129,92}</string>
-                <key>textureRect</key>
-                <string>{{130,1},{39,62}}</string>
+                <string>{{1,201},{51,64}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -150,13 +133,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>FireVizard_Run.png</string>
+            <string>Berserker_Run.png</string>
             <key>size</key>
-            <string>{189,128}</string>
+            <string>{59,458}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:de5db8a489f4fca6af12420b4be7144a:0c19748988179889a7eb926224ff5e1c:e5f77dfa69068e13ec1f9b8ef2c8e937$</string>
+            <string>$TexturePacker:SmartUpdate:3d0457fa4a3fb0ffb5194f435bd281cd:496f747ebb6b5be15ac5f4023f1938e4:7de2679ba77ff98b074bdc58b1dbb8ef$</string>
             <key>textureFileName</key>
-            <string>FireVizard_Run.png</string>
+            <string>Berserker_Run.png</string>
         </dict>
     </dict>
 </plist>

@@ -39,20 +39,26 @@ bool CTGScene::init()
 
 
 	// 将它们添加到场景中
-	
 	this->addChild(sam);
 	this->addChild(kni);
 	this->addChild(kun);
 	this->addChild(lig);
-	//kni->heroRun(-500,0);
-	//sam->heroRunAndAttack(Vec2(100,100));
-	kni->heroRunAndAttack(Vec2(100,100));
-	kun->heroRunAndAttack(Vec2(100, 100));
-	lig->heroRunAndAttack(Vec2(100, 100));
-	//kni->heroAttack();
-	//sam->heroAttack();
-	//sam->heroDead();
-	
+	this->addChild(fir);
+	this->addChild(wan);
+	this->addChild(mon);
+	this->addChild(pea);
+	this->addChild(com);
+	this->addChild(ber);
+	//sam->heroRunToEnemyPos(Vec2(100,100));
+	//kni->heroRunToEnemyPos(Vec2(100,100));
+	//kun->heroRunToEnemyPos(Vec2(100, 100));
+	//lig->heroRunToEnemyPos(Vec2(100, 100));
+	//fir->heroRunToEnemyPos(Vec2(100, 100));
+	//wan->heroRunToEnemyPos(Vec2(100, 100));
+	//mon->heroRunToEnemyPos(Vec2(100, 100));
+	//pea->heroRunToEnemyPos(Vec2(100, 100));
+	//com->heroRunToEnemyPos(Vec2(100, 100));
+	ber->heroRunToEnemyPos(Vec2(100, 100));
 	// 棋盘左侧中心，右侧中心
 	Vec2 leftOrigin = origin + Vec2(visibleSize.width * 0.05f, visibleSize.height / 2);
 	Vec2 rightOrigin = origin + Vec2(visibleSize.width * 0.95f, visibleSize.height / 2);

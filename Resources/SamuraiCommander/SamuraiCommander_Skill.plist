@@ -4,71 +4,88 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>1_Samurai_Attack</key>
+            <key>1_SamuraiCommander_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.417323,0.126214}</string>
+                <string>{0.448819,0.0560748}</string>
                 <key>spriteOffset</key>
-                <string>{-15,-8}</string>
+                <string>{-11,-7}</string>
                 <key>spriteSize</key>
-                <string>{53,69}</string>
+                <string>{61,93}</string>
                 <key>spriteSourceSize</key>
-                <string>{127,103}</string>
+                <string>{127,107}</string>
                 <key>textureRect</key>
-                <string>{{1,143},{53,69}}</string>
+                <string>{{188,1},{61,93}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>2_Samurai_Attack</key>
+            <key>2_SamuraiCommander_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.433071,0.135922}</string>
+                <string>{0.456693,0.046729}</string>
                 <key>spriteOffset</key>
-                <string>{-14,-8}</string>
+                <string>{-11,-3}</string>
                 <key>spriteSize</key>
-                <string>{53,69}</string>
+                <string>{57,101}</string>
                 <key>spriteSourceSize</key>
-                <string>{127,103}</string>
+                <string>{127,107}</string>
                 <key>textureRect</key>
-                <string>{{56,143},{53,69}}</string>
+                <string>{{58,1},{57,101}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>3_Samurai_Attack</key>
+            <key>3_SamuraiCommander_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.511811,0.126214}</string>
+                <string>{0.456693,0.046729}</string>
                 <key>spriteOffset</key>
-                <string>{7,-8}</string>
+                <string>{-11,0}</string>
                 <key>spriteSize</key>
-                <string>{101,69}</string>
+                <string>{55,107}</string>
                 <key>spriteSourceSize</key>
-                <string>{127,103}</string>
+                <string>{127,107}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{101,69}}</string>
+                <string>{{1,1},{55,107}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>4_Samurai_Attack</key>
+            <key>4_SamuraiCommander_Skill</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.519685,0.135922}</string>
+                <string>{0.488189,0.046729}</string>
                 <key>spriteOffset</key>
-                <string>{5,-8}</string>
+                <string>{-1,-4}</string>
                 <key>spriteSize</key>
-                <string>{95,69}</string>
+                <string>{69,99}</string>
                 <key>spriteSourceSize</key>
-                <string>{127,103}</string>
+                <string>{127,107}</string>
                 <key>textureRect</key>
-                <string>{{1,72},{95,69}}</string>
+                <string>{{117,1},{69,99}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>5_SamuraiCommander_Skill</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.551181,0.046729}</string>
+                <key>spriteOffset</key>
+                <string>{19,-10}</string>
+                <key>spriteSize</key>
+                <string>{87,87}</string>
+                <key>spriteSourceSize</key>
+                <string>{127,107}</string>
+                <key>textureRect</key>
+                <string>{{251,1},{87,87}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -82,13 +99,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>Samurai_Attack.png</string>
+            <string>SamuraiCommander_Skill.png</string>
             <key>size</key>
-            <string>{110,213}</string>
+            <string>{339,109}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:4c4c1e6022b66f9eb121294cb4c347ec:c18f1b6cf2ff142470fa280f558d1793:96a45aee2305c4ca6a9ce36d3a4781c3$</string>
+            <string>$TexturePacker:SmartUpdate:583620a4744b4abc02a8333f354b1767:962eae81b6fea9c942d9833bcf4f5eaa:6b434458db41f18ea7dde4451eedd649$</string>
             <key>textureFileName</key>
-            <string>Samurai_Attack.png</string>
+            <string>SamuraiCommander_Skill.png</string>
         </dict>
     </dict>
 </plist>

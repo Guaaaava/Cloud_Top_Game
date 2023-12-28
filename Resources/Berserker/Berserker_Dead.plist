@@ -4,105 +4,105 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>1_NinjaPeasant_Attack</key>
+            <key>1_Berserker_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.57732,0.163043}</string>
+                <string>{0.531646,0.0731707}</string>
                 <key>spriteOffset</key>
-                <string>{5,-3}</string>
+                <string>{4,-9}</string>
                 <key>spriteSize</key>
-                <string>{41,62}</string>
+                <string>{45,60}</string>
                 <key>spriteSourceSize</key>
-                <string>{97,92}</string>
+                <string>{79,82}</string>
                 <key>textureRect</key>
-                <string>{{235,1},{41,62}}</string>
+                <string>{{1,1},{45,60}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>2_Berserker_Dead</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.493671,0.097561}</string>
+                <key>spriteOffset</key>
+                <string>{0,-15}</string>
+                <key>spriteSize</key>
+                <string>{49,48}</string>
+                <key>spriteSourceSize</key>
+                <string>{79,82}</string>
+                <key>textureRect</key>
+                <string>{{63,1},{49,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>2_NinjaPeasant_Attack</key>
+            <key>3_Berserker_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.57732,0.173913}</string>
+                <string>{0.481013,0.097561}</string>
                 <key>spriteOffset</key>
-                <string>{4,-3}</string>
+                <string>{2,-21}</string>
                 <key>spriteSize</key>
-                <string>{41,62}</string>
+                <string>{47,36}</string>
                 <key>spriteSourceSize</key>
-                <string>{97,92}</string>
+                <string>{79,82}</string>
                 <key>textureRect</key>
-                <string>{{278,1},{41,62}}</string>
+                <string>{{60,89},{47,36}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>3_NinjaPeasant_Attack</key>
+            <key>4_Berserker_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.57732,0.173913}</string>
+                <string>{0.518987,0.0853659}</string>
                 <key>spriteOffset</key>
-                <string>{4,-3}</string>
+                <string>{4,-21}</string>
                 <key>spriteSize</key>
-                <string>{43,62}</string>
+                <string>{53,36}</string>
                 <key>spriteSourceSize</key>
-                <string>{97,92}</string>
+                <string>{79,82}</string>
                 <key>textureRect</key>
-                <string>{{190,1},{43,62}}</string>
+                <string>{{60,51},{53,36}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>4_NinjaPeasant_Attack</key>
+            <key>5_Berserker_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.587629,0.173913}</string>
+                <string>{0.518987,0.0731707}</string>
                 <key>spriteOffset</key>
-                <string>{14,-3}</string>
+                <string>{4,-21}</string>
                 <key>spriteSize</key>
-                <string>{69,62}</string>
+                <string>{57,36}</string>
                 <key>spriteSourceSize</key>
-                <string>{97,92}</string>
+                <string>{79,82}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{69,62}}</string>
+                <string>{{1,48},{57,36}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>5_NinjaPeasant_Attack</key>
+            <key>6_Berserker_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.546392,0.163043}</string>
+                <string>{0.493671,0.097561}</string>
                 <key>spriteOffset</key>
-                <string>{-14,-3}</string>
+                <string>{1,-21}</string>
                 <key>spriteSize</key>
-                <string>{69,62}</string>
+                <string>{57,36}</string>
                 <key>spriteSourceSize</key>
-                <string>{97,92}</string>
+                <string>{79,82}</string>
                 <key>textureRect</key>
-                <string>{{72,1},{69,62}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>6_NinjaPeasant_Attack</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.546392,0.163043}</string>
-                <key>spriteOffset</key>
-                <string>{-3,-3}</string>
-                <key>spriteSize</key>
-                <string>{45,62}</string>
-                <key>spriteSourceSize</key>
-                <string>{97,92}</string>
-                <key>textureRect</key>
-                <string>{{143,1},{45,62}}</string>
+                <string>{{1,86},{57,36}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -116,13 +116,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>NinjaPeasant_Attack.png</string>
+            <string>Berserker_Dead.png</string>
             <key>size</key>
-            <string>{320,64}</string>
+            <string>{114,126}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:00d9d0b0f451e55195f3a0735bad7a51:d33f106e4319922a9ff269712549c17e:6ec280d0b5cbc8921448293c6e1d7532$</string>
+            <string>$TexturePacker:SmartUpdate:53fa4533340c6c5d34422e850cce7242:db50997eedd797e47353e868d0922b5a:037a75eb0de8a6f89904bcd2b518e4c2$</string>
             <key>textureFileName</key>
-            <string>NinjaPeasant_Attack.png</string>
+            <string>Berserker_Dead.png</string>
         </dict>
     </dict>
 </plist>

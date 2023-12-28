@@ -9,13 +9,13 @@
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.225,0.194444}</string>
+                <string>{0.53125,0.134615}</string>
                 <key>spriteOffset</key>
-                <string>{-34,-5}</string>
+                <string>{2,-11}</string>
                 <key>spriteSize</key>
                 <string>{46,64}</string>
                 <key>spriteSourceSize</key>
-                <string>{120,108}</string>
+                <string>{128,104}</string>
                 <key>textureRect</key>
                 <string>{{65,135},{46,64}}</string>
                 <key>textureRotated</key>
@@ -26,13 +26,13 @@
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.291667,0.194444}</string>
+                <string>{0.53125,0.115385}</string>
                 <key>spriteOffset</key>
-                <string>{-29,-5}</string>
+                <string>{-1,-11}</string>
                 <key>spriteSize</key>
                 <string>{56,64}</string>
                 <key>spriteSourceSize</key>
-                <string>{120,108}</string>
+                <string>{128,104}</string>
                 <key>textureRect</key>
                 <string>{{69,69},{56,64}}</string>
                 <key>textureRotated</key>
@@ -43,13 +43,13 @@
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.391667,0.185185}</string>
+                <string>{0.570313,0.125}</string>
                 <key>spriteOffset</key>
-                <string>{-22,-6}</string>
+                <string>{-2,-12}</string>
                 <key>spriteSize</key>
                 <string>{66,62}</string>
                 <key>spriteSourceSize</key>
-                <string>{120,108}</string>
+                <string>{128,104}</string>
                 <key>textureRect</key>
                 <string>{{1,69},{66,62}}</string>
                 <key>textureRotated</key>
@@ -60,13 +60,13 @@
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.45,0.194444}</string>
+                <string>{0.523438,0.125}</string>
                 <key>spriteOffset</key>
-                <string>{-18,-4}</string>
+                <string>{-6,-10}</string>
                 <key>spriteSize</key>
                 <string>{68,66}</string>
                 <key>spriteSourceSize</key>
-                <string>{120,108}</string>
+                <string>{128,104}</string>
                 <key>textureRect</key>
                 <string>{{1,1},{68,66}}</string>
                 <key>textureRotated</key>
@@ -77,13 +77,13 @@
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.203704}</string>
+                <string>{0.546875,0.125}</string>
                 <key>spriteOffset</key>
-                <string>{-5,-4}</string>
+                <string>{-1,-10}</string>
                 <key>spriteSize</key>
                 <string>{54,66}</string>
                 <key>spriteSourceSize</key>
-                <string>{120,108}</string>
+                <string>{128,104}</string>
                 <key>textureRect</key>
                 <string>{{71,1},{54,66}}</string>
                 <key>textureRotated</key>
@@ -94,13 +94,13 @@
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.558333,0.194444}</string>
+                <string>{0.53125,0.115385}</string>
                 <key>spriteOffset</key>
-                <string>{7,-5}</string>
+                <string>{3,-11}</string>
                 <key>spriteSize</key>
                 <string>{40,64}</string>
                 <key>spriteSourceSize</key>
-                <string>{120,108}</string>
+                <string>{128,104}</string>
                 <key>textureRect</key>
                 <string>{{49,201},{40,64}}</string>
                 <key>textureRotated</key>
@@ -111,13 +111,13 @@
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.675,0.185185}</string>
+                <string>{0.59375,0.125}</string>
                 <key>spriteOffset</key>
-                <string>{18,-6}</string>
+                <string>{6,-12}</string>
                 <key>spriteSize</key>
                 <string>{48,62}</string>
                 <key>spriteSourceSize</key>
-                <string>{120,108}</string>
+                <string>{128,104}</string>
                 <key>textureRect</key>
                 <string>{{1,133},{48,62}}</string>
                 <key>textureRotated</key>
@@ -128,13 +128,13 @@
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.725,0.185185}</string>
+                <string>{0.578125,0.144231}</string>
                 <key>spriteOffset</key>
-                <string>{20,-5}</string>
+                <string>{0,-11}</string>
                 <key>spriteSize</key>
                 <string>{46,64}</string>
                 <key>spriteSourceSize</key>
-                <string>{120,108}</string>
+                <string>{128,104}</string>
                 <key>textureRect</key>
                 <string>{{1,183},{46,64}}</string>
                 <key>textureRotated</key>
@@ -154,7 +154,7 @@
             <key>size</key>
             <string>{126,248}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:dc5909ccd9061d2553b367c8abd09767:f29daf44166d65302e7c6c80d64cb115:65024aeab045060d998dedd9d2e0f183$</string>
+            <string>$TexturePacker:SmartUpdate:837944deb5226fdce11932a94d911d40:aca7a73873a849811a615065c3c7d096:65024aeab045060d998dedd9d2e0f183$</string>
             <key>textureFileName</key>
             <string>WandererMagican_Run.png</string>
         </dict>
