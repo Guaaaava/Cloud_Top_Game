@@ -9,14 +9,17 @@ using namespace ui;
 class Hero :public Sprite
 {
 public:
+	//英雄选择动作核心逻辑
 	void heroAction();
-	void upLevel(int lv) { _lv+=lv; _hp *= _lv; _ap *= _lv; };//升lv级
+	//升lv级
+	void upLevel(int lv) { _lv+=lv; _hp *= _lv; _ap *= _lv; };
+	//每回合减少的血量
 	void getHurted() {
 		for (std::list<Hero*>::iterator iter = _l.begin(); iter != _l.end(); iter++)
 		{
 			if ((*iter)->_hp > 0)
 			{
-				if (_mp >= _max_mp)
+				if ((*iter)->_mp >= (*iter)->_max_mp)
 					_enemy_ap += (*iter)->_skill_ap;
 				else
 				    _enemy_ap += (*iter)->_ap;
@@ -24,11 +27,13 @@ public:
 		}
 		_hp -= _enemy_ap;
 	};
-
-	void getEnemyInfor(std::list<Hero*>l) { _l = l; };//获取敌人信息
-
+	//获取敌人信息
+	void getEnemyInfor(std::list<Hero*>l) { _l = l; };
+	//创建plist帧动画
 	Animation* createPlistAnimation(std::string filename, std::string framename, int photonums);
+	//初始化人物属性，以及坐标start_pos（默认坐标为屏幕中央）
 	virtual bool init(Vec2&start_pos= Vec2(Director::getInstance()->getVisibleSize() / 2)) = 0;
+	//前往敌人坐标并执行接下来的一系列动作
 	virtual void heroRunToEnemyPos(Vec2& end_pos) = 0;
 	//实现英雄攻击动画
 	virtual void heroAttack() = 0;

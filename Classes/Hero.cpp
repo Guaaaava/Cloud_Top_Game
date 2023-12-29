@@ -18,7 +18,7 @@ Animation* Hero::createPlistAnimation(std::string filename, std::string framenam
 	for (int i = 1; i <= photonums; i++) {
 		images.pushBack(cache->getSpriteFrameByName(Value(i).asString() + framename));
 	}
-	return Animation::createWithSpriteFrames(images, 1.f / photonums);//改为一秒钟播放一次完整的帧动画
+	return Animation::createWithSpriteFrames(images, 1.f / 8);
 }
 
 void Hero::heroAction()
@@ -45,23 +45,23 @@ void Hero::heroAction()
 }
 /****************************************************
  * 功能：Samurai类成员函数
- * _hp=100
- * _ap=10
+ * _hp=320
+ * _ap=13
  * _mp=0
  * _lv=1
  *_skill_ap=1.5*_ap
- * _max_mp=5
+ * _max_mp=4
  * 作者：卞思涵
  ****************************************************/
 bool Samurai::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
 	_postion = start_pos;
-	_hp = 100;
-	_ap = 10;
+	_hp = 320;
+	_ap = 13;
 	_mp = 0;
 	_lv = 1;
-	_max_mp = 5;
+	_max_mp = 4;
 	_skill_ap = 1.5 * _ap;
 	return true;
 }
@@ -137,22 +137,26 @@ void Samurai::heroRunToEnemyPos(Vec2& end_pos)
 }
 /****************************************************
  * 功能：Knight类成员函数
+ * _hp=350
+ * _ap=8
+ * _mp=0
+ * _lv=1
+ *_skill_ap=1.5*_ap
+ * _max_mp=5
  * 作者：卞思涵
  ****************************************************/
 bool Knight::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
 	_postion = start_pos;
-	_hp = 100;
-	_ap = 10;
+	_hp = 350;
+	_ap = 8;
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
 	_skill_ap = 1.5 * _ap;
 	return true;
 }
-
-
 
 void Knight::heroAttack()
 {
@@ -225,17 +229,23 @@ void Knight::heroRunToEnemyPos(Vec2& end_pos)
 }
 /****************************************************
  * 功能：Kunoichi类成员函数
+ * _hp=290
+ * _ap=15
+ * _mp=0
+ * _lv=1
+ *_skill_ap=1.5*_ap
+ * _max_mp=4
  * 作者：卞思涵
  ****************************************************/
 bool Kunoichi::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
 	_postion = start_pos;
-	_hp = 100;
-	_ap = 10;
+	_hp = 290;
+	_ap = 15;
 	_mp = 0;
 	_lv = 1;
-	_max_mp = 5;
+	_max_mp = 4;
 	_skill_ap = 1.5 * _ap;
 	return true;
 }
@@ -312,18 +322,24 @@ void Kunoichi::heroRunToEnemyPos(Vec2& end_pos)
 }
 /****************************************************
  * 功能：LightningMage类成员函数
+ * _hp=280
+ * _ap=15
+ * _mp=0
+ * _lv=1
+ *_skill_ap=1.7*_ap
+ * _max_mp=5
  * 作者：卞思涵
  ****************************************************/
 bool LightningMage::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
 	_postion = start_pos;
-	_hp = 100;
-	_ap = 10;
+	_hp = 280;
+	_ap = 15;
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
-	_skill_ap = 1.5 * _ap;
+	_skill_ap = 1.7 * _ap;
 	return true;
 }
 
@@ -400,18 +416,24 @@ void LightningMage::heroRunToEnemyPos(Vec2& end_pos)
 }
 /****************************************************
  * 功能：FireVizard类成员函数
+ * _hp=300
+ * _ap=16
+ * _mp=0
+ * _lv=1
+ *_skill_ap=2.5*_ap
+ * _max_mp=6
  * 作者：卞思涵
  ****************************************************/
 bool FireVizard::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
 	_postion = start_pos;
-	_hp = 100;
-	_ap = 10;
+	_hp = 300;
+	_ap = 16;
 	_mp = 0;
 	_lv = 1;
-	_max_mp = 5;
-	_skill_ap = 1.5 * _ap;
+	_max_mp = 6;
+	_skill_ap = 2.5 * _ap;
 	return true;
 }
 
@@ -488,23 +510,26 @@ void FireVizard::heroRunToEnemyPos(Vec2& end_pos)
 }
 /****************************************************
  * 功能：WandererMagican类成员函数
+ * _hp=280
+ * _ap=17
+ * _mp=0
+ * _lv=1
+ *_skill_ap=2*_ap
+ * _max_mp=5
  * 作者：卞思涵
  ****************************************************/
 bool WandererMagican::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
 	_postion = start_pos;
-	_hp = 100;
-	_ap = 10;
+	_hp = 280;
+	_ap = 17;
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
-	_skill_ap = 1.5 * _ap;
+	_skill_ap = 2* _ap;
 	return true;
 }
-
-
-
 
 void WandererMagican::heroAttack()
 {
@@ -577,23 +602,26 @@ void WandererMagican::heroRunToEnemyPos(Vec2& end_pos)
 }
 /****************************************************
  * 功能：NinjaMonk类成员函数
+ * _hp=300
+ * _ap=8
+ * _mp=0
+ * _lv=1
+ *_skill_ap=1.1*_ap
+ * _max_mp=2
  * 作者：卞思涵
  ****************************************************/
 bool NinjaMonk::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
 	_postion = start_pos;
-	_hp = 100;
-	_ap = 10;
+	_hp = 300;
+	_ap = 8;
 	_mp = 0;
 	_lv = 1;
-	_max_mp = 5;
-	_skill_ap = 1.5 * _ap;
+	_max_mp = 2;
+	_skill_ap = 1.1 * _ap;
 	return true;
 }
-
-
-
 
 void NinjaMonk::heroAttack()
 {
@@ -666,21 +694,26 @@ void NinjaMonk::heroRunToEnemyPos(Vec2& end_pos)
 }
 /****************************************************
  * 功能：NinjaPeasant类成员函数
+ * _hp=300
+ * _ap=9
+ * _mp=0
+ * _lv=1
+ *_skill_ap=1.2*_ap
+ * _max_mp=3
  * 作者：卞思涵
  ****************************************************/
 bool NinjaPeasant::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
 	_postion = start_pos;
-	_hp = 100;
-	_ap = 10;
+	_hp = 300;
+	_ap = 9;
 	_mp = 0;
 	_lv = 1;
-	_max_mp = 5;
-	_skill_ap = 1.5 * _ap;
+	_max_mp = 3;
+	_skill_ap = 1.2 * _ap;
 	return true;
 }
-
 
 void NinjaPeasant::heroAttack()
 {
@@ -753,22 +786,26 @@ void NinjaPeasant::heroRunToEnemyPos(Vec2& end_pos)
 }
 /****************************************************
  * 功能：SamuraiCommander类成员函数
+ * _hp=320
+ * _ap=10
+ * _mp=0
+ * _lv=1
+ *_skill_ap=1.5*_ap
+ * _max_mp=4
  * 作者：卞思涵
  ****************************************************/
 bool SamuraiCommander::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
 	_postion = start_pos;
-	_hp = 100;
+	_hp = 320;
 	_ap = 10;
 	_mp = 0;
 	_lv = 1;
-	_max_mp = 5;
+	_max_mp = 4;
 	_skill_ap = 1.5 * _ap;
 	return true;
 }
-
-
 
 void SamuraiCommander::heroAttack()
 {
@@ -841,23 +878,26 @@ void SamuraiCommander::heroRunToEnemyPos(Vec2& end_pos)
 }
 /****************************************************
  * 功能：Berserker类成员函数
+ * _hp=200
+ * _ap=20
+ * _mp=0
+ * _lv=1
+ *_skill_ap=2*_ap
+ * _max_mp=3
  * 作者：卞思涵
  ****************************************************/
 bool Berserker::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
 	_postion = start_pos;
-	_hp = 100;
-	_ap = 10;
+	_hp = 200;
+	_ap = 20;
 	_mp = 0;
 	_lv = 1;
-	_max_mp = 5;
-	_skill_ap = 1.5 * _ap;
-	_postion = start_pos;
+	_max_mp = 3;
+	_skill_ap = 2 * _ap;
 	return true;
 }
-
-
 
 void Berserker::heroAttack()
 {
