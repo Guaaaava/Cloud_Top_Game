@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist>
+  <dict>
+    <key>1001</key>
+    <string>金铲铲之战</string>
+  </dict>
+  <dict>
+    <key>1002</key>
+    <string>开始</string>
+  </dict>
+  <dict>
+    <key>1003</key>
+    <string>商店</string>
+  </dict>
+  <dict>
+    <key>1004</key>
+    <string>退出</string>
+  </dict>
+</plist>
