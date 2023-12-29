@@ -49,7 +49,7 @@ void Hero::heroAction()
  * _ap=10
  * _mp=0
  * _lv=1
-
+ *_skill_ap=1.5*_ap
  * _max_mp=5
  * ×÷Õß£º±åË¼º­
  ****************************************************/
@@ -62,6 +62,7 @@ bool Samurai::init(Vec2& start_pos)
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
+	_skill_ap = 1.5 * _ap;
 	return true;
 }
 
@@ -141,13 +142,13 @@ void Samurai::heroRunToEnemyPos(Vec2& end_pos)
 bool Knight::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
-	
 	_postion = start_pos;
 	_hp = 100;
 	_ap = 10;
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
+	_skill_ap = 1.5 * _ap;
 	return true;
 }
 
@@ -235,6 +236,7 @@ bool Kunoichi::init(Vec2& start_pos)
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
+	_skill_ap = 1.5 * _ap;
 	return true;
 }
 
@@ -321,6 +323,7 @@ bool LightningMage::init(Vec2& start_pos)
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
+	_skill_ap = 1.5 * _ap;
 	return true;
 }
 
@@ -408,6 +411,7 @@ bool FireVizard::init(Vec2& start_pos)
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
+	_skill_ap = 1.5 * _ap;
 	return true;
 }
 
@@ -495,6 +499,7 @@ bool WandererMagican::init(Vec2& start_pos)
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
+	_skill_ap = 1.5 * _ap;
 	return true;
 }
 
@@ -583,6 +588,7 @@ bool NinjaMonk::init(Vec2& start_pos)
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
+	_skill_ap = 1.5 * _ap;
 	return true;
 }
 
@@ -671,6 +677,7 @@ bool NinjaPeasant::init(Vec2& start_pos)
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
+	_skill_ap = 1.5 * _ap;
 	return true;
 }
 
@@ -757,7 +764,7 @@ bool SamuraiCommander::init(Vec2& start_pos)
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
-
+	_skill_ap = 1.5 * _ap;
 	return true;
 }
 
@@ -839,13 +846,14 @@ void SamuraiCommander::heroRunToEnemyPos(Vec2& end_pos)
 bool Berserker::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
-
 	_postion = start_pos;
 	_hp = 100;
 	_ap = 10;
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 5;
+	_skill_ap = 1.5 * _ap;
+	_postion = start_pos;
 	return true;
 }
 
