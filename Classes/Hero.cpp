@@ -5,10 +5,7 @@ bool Hero::init(Vec2& start_pos )
 	if (!Sprite::init())return false;
 	return true;
 }
-void Hero::getHurted(int enemy_ap)
-{
-	_hp -= enemy_ap;
-}
+
 Animation* Hero::createPlistAnimation(std::string filename, std::string framename, int photonums)
 {
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(filename);
@@ -24,6 +21,28 @@ Animation* Hero::createPlistAnimation(std::string filename, std::string framenam
 	return Animation::createWithSpriteFrames(images, 1.f / photonums);//¸ÄÎªÒ»ÃëÖÓ²¥·ÅÒ»´ÎÍêÕûµÄÖ¡¶¯»­
 }
 
+void Hero::heroAction()
+{
+	if (_hp <= 0)
+	{
+		_sprite->setVisible(false); // Òþ²Ø¾«Áé
+		this->heroDead();
+	}
+	else if (_mp >= _max_mp)
+	{
+		_sprite->setVisible(false); // Òþ²Ø¾«Áé
+		this->heroSkill();
+		this->getHurted();
+		_mp = 0; // ÖØÖÃ mp
+	}
+	else
+	{
+		_sprite->setVisible(false); // Òþ²Ø¾«Áé
+		this->heroAttack();
+		this->getHurted();
+		_mp++;
+	}
+}
 /****************************************************
  * ¹¦ÄÜ£ºSamuraiÀà³ÉÔ±º¯Êý
  * _hp=100
@@ -46,26 +65,6 @@ bool Samurai::init(Vec2& start_pos)
 	return true;
 }
 
-void Samurai::heroAction()
-{
-	if (_hp <= 0)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroDead();
-	}
-	else if (_mp >= _max_mp)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroSkill();
-		_mp = 0; // ÖØÖÃ mp
-	}
-	else
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroAttack();
-		_mp++;
-	}
-}
 
 void Samurai::heroAttack()
 {
@@ -82,7 +81,6 @@ void Samurai::heroAttack()
 
 	// ²¥·Å¹¥»÷Ö¡¶¯»­
 	_sprite->runAction(sequence);
-	
 }
 void Samurai::heroSkill()
 {
@@ -153,26 +151,7 @@ bool Knight::init(Vec2& start_pos)
 	return true;
 }
 
-void Knight::heroAction()
-{
-	if (_hp <= 0)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroDead();
-	}
-	else if (_mp >= _max_mp)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroSkill();
-		_mp = 0; // ÖØÖÃ mp
-	}
-	else
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroAttack();
-		_mp++;
-	}
-}
+
 
 void Knight::heroAttack()
 {
@@ -259,26 +238,6 @@ bool Kunoichi::init(Vec2& start_pos)
 	return true;
 }
 
-void Kunoichi::heroAction()
-{
-	if (_hp <= 0)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroDead();
-	}
-	else if (_mp >= _max_mp)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroSkill();
-		_mp = 0; // ÖØÖÃ mp
-	}
-	else
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroAttack();
-		_mp++;
-	}
-}
 
 void Kunoichi::heroAttack()
 {
@@ -365,26 +324,7 @@ bool LightningMage::init(Vec2& start_pos)
 	return true;
 }
 
-void LightningMage::heroAction()
-{
-	if (_hp <= 0)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroDead();
-	}
-	else if (_mp >= _max_mp)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroSkill();
-		_mp = 0; // ÖØÖÃ mp
-	}
-	else
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroAttack();
-		_mp++;
-	}
-}
+
 
 void LightningMage::heroAttack()
 {
@@ -471,26 +411,7 @@ bool FireVizard::init(Vec2& start_pos)
 	return true;
 }
 
-void FireVizard::heroAction()
-{
-	if (_hp <= 0)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroDead();
-	}
-	else if (_mp >= _max_mp)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroSkill();
-		_mp = 0; // ÖØÖÃ mp
-	}
-	else
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroAttack();
-		_mp++;
-	}
-}
+
 
 void FireVizard::heroAttack()
 {
@@ -578,26 +499,7 @@ bool WandererMagican::init(Vec2& start_pos)
 }
 
 
-void WandererMagican::heroAction()
-{
-	if (_hp <= 0)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroDead();
-	}
-	else if (_mp >= _max_mp)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroSkill();
-		_mp = 0; // ÖØÖÃ mp
-	}
-	else
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroAttack();
-		_mp++;
-	}
-}
+
 
 void WandererMagican::heroAttack()
 {
@@ -685,26 +587,7 @@ bool NinjaMonk::init(Vec2& start_pos)
 }
 
 
-void NinjaMonk::heroAction()
-{
-	if (_hp <= 0)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroDead();
-	}
-	else if (_mp >= _max_mp)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroSkill();
-		_mp = 0; // ÖØÖÃ mp
-	}
-	else
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroAttack();
-		_mp++;
-	}
-}
+
 
 void NinjaMonk::heroAttack()
 {
@@ -791,26 +674,6 @@ bool NinjaPeasant::init(Vec2& start_pos)
 	return true;
 }
 
-void NinjaPeasant::heroAction()
-{
-	if (_hp <= 0)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroDead();
-	}
-	else if (_mp >= _max_mp)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroSkill();
-		_mp = 0; // ÖØÖÃ mp
-	}
-	else
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroAttack();
-		_mp++;
-	}
-}
 
 void NinjaPeasant::heroAttack()
 {
@@ -898,26 +761,7 @@ bool SamuraiCommander::init(Vec2& start_pos)
 	return true;
 }
 
-void SamuraiCommander::heroAction()
-{
-	if (_hp <= 0)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroDead();
-	}
-	else if (_mp >= _max_mp)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroSkill();
-		_mp = 0; // ÖØÖÃ mp
-	}
-	else
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroAttack();
-		_mp++;
-	}
-}
+
 
 void SamuraiCommander::heroAttack()
 {
@@ -1005,26 +849,7 @@ bool Berserker::init(Vec2& start_pos)
 	return true;
 }
 
-void Berserker::heroAction()
-{
-	if (_hp <= 0)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroDead();
-	}
-	else if (_mp >= _max_mp)
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroSkill();
-		_mp = 0; // ÖØÖÃ mp
-	}
-	else
-	{
-		_sprite->setVisible(false); // Òþ²Ø¾«Áé
-		this->heroAttack();
-		_mp++;
-	}
-}
+
 
 void Berserker::heroAttack()
 {

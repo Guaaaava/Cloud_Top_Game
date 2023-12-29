@@ -9,8 +9,11 @@ using namespace ui;
 class Hero :public Sprite
 {
 public:
+	void heroAction();
+	void upLevel(int lv) { _lv+=lv; _hp *= _lv; _ap *= _lv; };//升lv级
+	void getHurted() { _hp -= _enemy_ap; };
+	void setEnemyAp(int ap) { _enemy_ap = ap; };//获取敌人攻击力
 	Animation* createPlistAnimation(std::string filename, std::string framename, int photonums);
-	void getHurted(int enemy_ap);
 	virtual bool init(Vec2&start_pos= Vec2(Director::getInstance()->getVisibleSize() / 2));
 	//实现英雄攻击动画
 	virtual void heroAttack() = 0;
@@ -18,20 +21,23 @@ public:
 	virtual void heroDead() = 0;
 	//移动到某一点并攻击
 	virtual void heroSkill() = 0;
-	virtual void heroAction() = 0;
+	
 protected:
 	int _hp;
 	int _mp;
 	int _ap;
 	int _lv;
 	int _max_mp;
+
+	int _enemy_ap;
+
+	bool _reverse = false;//移动时是否翻转
+	Vec2 _postion;//当前位置
 	Sprite* _sprite;
 	Animation* _run;
 	Animation* _attack;
 	Animation* _dead;
 	Animation* _skill;
-	bool _reverse = false;
-	Vec2 _postion;
 };
 
 class Samurai :public Hero
@@ -43,7 +49,7 @@ public:
 	void heroDead();
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void heroSkill();
-	void heroAction();
+	
 };
 
 class Knight :public Hero
@@ -55,7 +61,7 @@ public:
 	void heroDead();
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void heroSkill();
-	void heroAction();
+	
 };
 class Berserker :public Hero
 {
@@ -66,7 +72,7 @@ public:
 	void heroDead();
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void heroSkill();
-	void heroAction();
+	
 };
 
 class Kunoichi :public Hero
@@ -79,7 +85,7 @@ public:
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void getHurted(int enemy_ap);
 	void heroSkill();
-	void heroAction();
+
 };
 
 class LightningMage :public Hero
@@ -92,7 +98,7 @@ public:
 	void heroDead();
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void heroSkill();
-	void heroAction();
+
 };
 
 class FireVizard :public Hero
@@ -104,7 +110,7 @@ public:
 	void heroDead();
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void heroSkill();
-	void heroAction();
+	
 };
 
 class WandererMagican :public Hero
@@ -116,7 +122,7 @@ public:
 	void heroDead();
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void heroSkill();
-	void heroAction();
+	
 };
 class NinjaMonk:public Hero
 {
@@ -127,7 +133,7 @@ public:
 	void heroDead();
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void heroSkill();
-	void heroAction();
+	
 };
 class NinjaPeasant :public Hero
 {
@@ -138,7 +144,7 @@ public:
 	void heroDead();
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void heroSkill();
-	void heroAction();
+	
 };
 class SamuraiCommander :public Hero
 {
@@ -149,5 +155,5 @@ public:
 	void heroDead();
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void heroSkill();
-	void heroAction();
+	
 };
