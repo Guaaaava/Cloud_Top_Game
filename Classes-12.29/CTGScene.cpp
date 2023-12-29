@@ -4,47 +4,48 @@
 #include "SimpleAudioEngine.h"
 
 /****************************************************
- * ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- * ï¿½ï¿½ï¿½ß£ï¿½ï¿½Æ³ï¿½ï¿½ï¿½
- * Ê±ï¿½ä£º2023ï¿½ï¿½12ï¿½ï¿½7ï¿½ï¿½
+ * ¹¦ÄÜ£º³õÊ¼»¯½çÃæ
+ * ×÷Õß£º»Æ³½Óî
+ * Ê±¼ä£º2023Äê12ÔÂ7ÈÕ
  * **************************************************
- * CopyRight 2023 by ï¿½Æ³ï¿½ï¿½ï¿½
+ * CopyRight 2023 by »Æ³½Óî
  * **************************************************/
-LayerColor* CTGScene::layer = nullptr;			// Îªï¿½ï¿½Ì¬ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Õ¼ä£¨ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+LayerColor* CTGScene::layer = nullptr;			// Îª¾²Ì¬³ÉÔ±·ÖÅä¿Õ¼ä£¨ÖØÒª£¡£¡£©
 bool CTGScene::init()
 {
 	if (!Scene::init())
 		return false;
 
-	/* Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+	/* Ô¤¼ÓÔØÒôÀÖ */
 	auto audio = CocosDenshion::SimpleAudioEngine::getInstance();
 	audio->preloadBackgroundMusic("mainScene/undertale.mp3");
 
-	/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+	/* ±³¾°ÒôÀÖ */
 	audio->playBackgroundMusic("mainScene/undertale.mp3", true);
-	// ï¿½ï¿½È¡ï¿½ï¿½Ä»ï¿½ï¿½ï¿½Äµï¿½
+
+	// »ñÈ¡ÆÁÄ»ÖÐÐÄµã
 	const auto visibleSize = Director::getInstance()->getVisibleSize();
 	const auto frameSize = Director::getInstance()->getOpenGLView()->getFrameSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	layer = LayerColor::create(Color4B::WHITE);	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«Îªï¿½ï¿½É«
+	// ±³¾°²ã
+	layer = LayerColor::create(Color4B::WHITE);	// ±³¾°²ãÑÕÉ«Îª°×É«
 	layer->setPosition(origin);
 	layer->setContentSize(visibleSize);
 	this->addChild(layer);
 
-	// ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£©
+	// ¶ÔÕ½³¡¾°£¨¾«Áé£©
 	auto spriteChessBoard = Sprite::create("ChessBoardScene.png");
 	spriteChessBoard->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2));
-	layer->addChild(spriteChessBoard, 1);			// ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ z ÖµÎª 1
+	layer->addChild(spriteChessBoard, 1);			// ¶ÔÕ½³¡¾° z ÖµÎª 1
 
-	// ï¿½Ìµê¡¢ï¿½ï¿½ï¿½Ì£ï¿½
+	// ÉÌµê¡¢ÆåÅÌ£¿
 	Shop* shop = GameController::getInstance()->getShop();
 	ChessBoard* chessBoard = GameController::getInstance()->getChessBoard();
 
-	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// ´´½¨´¥ÃþÊÂ¼þ¼àÌýÆ÷
 	auto listener = EventListenerTouchOneByOne::create();
-	listener->setSwallowTouches(true);	// ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ã»
+	listener->setSwallowTouches(true);	// ÉèÖÃÊÂ¼þÍÌÃ»
 	listener->onTouchBegan = CC_CALLBACK_2(CTGScene::onTouchBegan, this);
 	listener->onTouchMoved = CC_CALLBACK_2(CTGScene::onTouchMoved, this);
 	listener->onTouchEnded = CC_CALLBACK_2(CTGScene::onTouchEnded, this);
@@ -56,22 +57,22 @@ bool CTGScene::init()
 }
 
 /****************************************************
- * ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»Øµï¿½ï¿½ï¿½ï¿½ï¿½
- * ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½true
- * ï¿½ï¿½ï¿½ß£ï¿½ï¿½Æ³ï¿½ï¿½ï¿½
- * Ê±ï¿½ä£º2023ï¿½ï¿½12ï¿½ï¿½27ï¿½ï¿½
+ * ¹¦ÄÜ£º°´ÏÂÊó±êµÄ»Øµ÷º¯Êý
+ * ·µ»ØÖµ£ºÈôµã»÷×ø±êÔÚÓ¢ÐÛÇøÓòÄÚ£¬·µ»Øtrue
+ * ×÷Õß£º»Æ³½Óî
+ * Ê±¼ä£º2023Äê12ÔÂ27ÈÕ
  * **************************************************
- * CopyRight 2023 by ï¿½Æ³ï¿½ï¿½ï¿½
+ * CopyRight 2023 by »Æ³½Óî
  * **************************************************/
 bool CTGScene::onTouchBegan(Touch* touch, Event* event)
 {
-	// ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+	// µã»÷Î»ÖÃ
 	Point touchPoint = touch->getLocation();
 
-	// ï¿½ï¿½È¡ï¿½ï¿½Ñ¡ï¿½ÐµÄ¾ï¿½ï¿½ï¿½
+	// »ñÈ¡±»Ñ¡ÖÐµÄ¾«Áé
 	touchingSprite = judgePointInSprite(touchPoint);
 
-	if (touchingSprite != nullptr)	// ï¿½Ú¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò·µ»ï¿½true
+	if (touchingSprite != nullptr)	// ÔÚ¾«ÁéÇøÓòÄÚÔò·µ»Øtrue
 	{
 		return true;
 	}
@@ -79,17 +80,17 @@ bool CTGScene::onTouchBegan(Touch* touch, Event* event)
 }
 
 /****************************************************
- * ï¿½ï¿½ï¿½Ü£ï¿½ï¿½É¿ï¿½ï¿½ï¿½ï¿½Ä»Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¢ï¿½Û¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½
- * ï¿½ï¿½ï¿½ß£ï¿½ï¿½Æ³ï¿½ï¿½ï¿½
- * Ê±ï¿½ä£º2023ï¿½ï¿½12ï¿½ï¿½27ï¿½ï¿½
+ * ¹¦ÄÜ£ºËÉ¿ªÊó±êµÄ»Øµ÷º¯Êý£¬Ó¢ÐÛ¸ú×ÅÊó±êÒÆ¶¯
+ * ×÷Õß£º»Æ³½Óî
+ * Ê±¼ä£º2023Äê12ÔÂ27ÈÕ
  * **************************************************
- * CopyRight 2023 by ï¿½Æ³ï¿½ï¿½ï¿½
+ * CopyRight 2023 by »Æ³½Óî
  * **************************************************/
 void CTGScene::onTouchMoved(Touch* touch, Event* event)
 {
 	touchingSprite->setPosition(touchingSprite->getPosition() + touch->getDelta());
 
-	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ä»¯
+	// ³öÊÛÇøÓòÑùÊ½±ä»¯
 	auto touchPoint = touch->getLocation();
 	auto spriteSellOrigin = GameController::getInstance()->getShop()->getSellOrigin();
 	auto rectSellOrigin = spriteSellOrigin->getBoundingBox();
@@ -104,12 +105,12 @@ void CTGScene::onTouchMoved(Touch* touch, Event* event)
 }
 
 /****************************************************
- * ï¿½ï¿½ï¿½Ü£ï¿½ï¿½É¿ï¿½ï¿½ï¿½ï¿½Ä»Øµï¿½ï¿½ï¿½ï¿½ï¿½
- * Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¢ï¿½ï¿½
- * ï¿½ï¿½ï¿½ß£ï¿½ï¿½Æ³ï¿½ï¿½ï¿½
- * Ê±ï¿½ä£º2023ï¿½ï¿½12ï¿½ï¿½27ï¿½ï¿½
+ * ¹¦ÄÜ£ºËÉ¿ªÊó±êµÄ»Øµ÷º¯Êý
+ * ËµÃ÷£ºÈôÔÚ³öÊÛÇøÓòÄÚËÉ¿ª£¬Ôò³öÊÛÕâ¸öÓ¢ÐÛ
+ * ×÷Õß£º»Æ³½Óî
+ * Ê±¼ä£º2023Äê12ÔÂ27ÈÕ
  * **************************************************
- * CopyRight 2023 by ï¿½Æ³ï¿½ï¿½ï¿½
+ * CopyRight 2023 by »Æ³½Óî
  * **************************************************/
 void CTGScene::onTouchEnded(Touch* touch, Event* event)
 {
@@ -119,19 +120,19 @@ void CTGScene::onTouchEnded(Touch* touch, Event* event)
 
 	if (rectSellOrigin.containsPoint(touchEndedPoint))
 	{
-		// ï¿½ï¿½ï¿½ï¿½Ó¢ï¿½Û¡ï¿½Î¬ï¿½ï¿½ï¿½Ìµê¡¢ï¿½ï¿½ï¿½ÌµÈ¼ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½Ó½ï¿½Ò£ï¿½ï¿½ï¿½ï¿½Â±ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½Â°ï¿½Å¥×´Ì¬
+		// Âô³öÓ¢ÐÛ¡¢Î¬»¤ÉÌµê¡¢ÆåÅÌµÈ¼¯ºÏ£¬Ìí¼Ó½ð±Ò£¬¸üÐÂ±êÇ©£¬¸üÐÂ°´Å¥×´Ì¬
 		GameController::getInstance()->sellHero(touchingSprite);
-		touchingSprite = nullptr;	// ï¿½Þ¸ï¿½
+		touchingSprite = nullptr;	// ÐÞ¸Ä
 	}
 }
 
 /****************************************************
- * ï¿½ï¿½ï¿½Ü£ï¿½ï¿½Ð¶Ï´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½
- * ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ò·µ»Ø¸Ã¾ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ò·µ»ï¿½nullptr
- * ï¿½ï¿½ï¿½ß£ï¿½ï¿½Æ³ï¿½ï¿½ï¿½
- * Ê±ï¿½ä£º2023ï¿½ï¿½12ï¿½ï¿½27ï¿½ï¿½
+ * ¹¦ÄÜ£ºÅÐ¶Ï´¥ÃþµãÊÇ·ñÔÚÒÑÓÐ¾«ÁéÇøÓòÄÚ£¬
+ * ·µ»ØÖµ£ºÊÇÔò·µ»Ø¸Ã¾«Áé£¬·ñÔò·µ»Ønullptr
+ * ×÷Õß£º»Æ³½Óî
+ * Ê±¼ä£º2023Äê12ÔÂ27ÈÕ
  * **************************************************
- * CopyRight 2023 by ï¿½Æ³ï¿½ï¿½ï¿½
+ * CopyRight 2023 by »Æ³½Óî
  * **************************************************/
 Hero* CTGScene::judgePointInSprite(Point pnt)
 {
