@@ -28,6 +28,6 @@ public:
 private:
 	void menuTrainingModeCallback(cocos2d::Ref* pSender);//训练模式按钮的回调函数
 
-	void menuOnlineModeCallback(cocos2d::Ref* pSender);//训练模式按钮的回调函数
+	void menuOnlineModeCallback(cocos2d::Ref* pSender);//联机模式按钮的回调函数
 
 };

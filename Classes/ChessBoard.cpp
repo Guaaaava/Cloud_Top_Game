@@ -15,6 +15,8 @@ bool ChessBoard::init()
 		_BOARD[i].resize(BDSZ_X);
 	}
 
+	_STAND.resize(BDSZ_X);
+
 	return true;
 }
 

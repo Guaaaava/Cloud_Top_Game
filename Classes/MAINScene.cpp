@@ -4,7 +4,8 @@
 * 时间:2023年12月23日
 **************/
 
-#include"MAINScene.h"
+#include "MAINScene.h"
+#include "CTGScene.h"
 
 USING_NS_CC;
 
@@ -139,7 +140,9 @@ void MAINScene::menuTrainingModeCallback(cocos2d::Ref* pSender)
 	auto director = Director::getInstance();
 
 	/* 改变窗口大小 */
-	director->getOpenGLView()->setFrameSize(1150, 950);
+	Size newSize(CHESSBOARD_WIDTH, CHESSBOARD_HEIGHT);
+	director->getOpenGLView()->setDesignResolutionSize(newSize.width, newSize.height, ResolutionPolicy::EXACT_FIT);
+	director->getOpenGLView()->setFrameSize(newSize.width, newSize.height);
 
 	/* 下一场景进栈 */
 	auto nextScene = CTGScene::create();
@@ -160,7 +163,9 @@ void MAINScene::menuOnlineModeCallback(cocos2d::Ref* pSender)
 	auto director = Director::getInstance();
 
 	/* 改变窗口大小 */
-	director->getOpenGLView()->setFrameSize(1150, 950);
+	Size newSize(CHESSBOARD_WIDTH, CHESSBOARD_HEIGHT);
+	director->getOpenGLView()->setDesignResolutionSize(newSize.width, newSize.height, ResolutionPolicy::EXACT_FIT);
+	director->getOpenGLView()->setFrameSize(newSize.width, newSize.height);
 
 	/* 下一场景进栈 */
 	auto nextScene = CTGScene::create();

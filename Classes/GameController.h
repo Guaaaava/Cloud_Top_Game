@@ -6,16 +6,16 @@
 * 时间:2023年12月28日
 **************/
 
-#include"cocos2d.h"
+#include "cocos2d.h"
 USING_NS_CC;
 
-#include"ChessBoard.h"
+#include "ChessBoard.h"
 
 #include "Shop.h"
 
-#include"Hero.h"
+#include "Hero.h"
 
-#include"CTGScene.h"
+#include "CTGScene.h"
 
 /* 游戏相关 */
 
@@ -35,13 +35,6 @@ const int EXP_LEVEL[MAX_LEVEL + 5] = { 0, 6, 6 + 10, 6 + 10 + 14, 6 + 10 + 14 + 
 
 class GameController
 {
-private:
-	static GameController* _instance;		//实例对象
-	Shop* _shop;							// 记录一个商店对象
-	ChessBoard* _chessBoard;				//虚拟棋盘
-	int enemyMoney;							// 敌方金币
-	int enemyExp;							// 敌方经验
-	int enemyLevel;							// 敌方等级
 public:
 	GameController();						//构造函数
 	~GameController();						//析构函数
@@ -54,10 +47,19 @@ public:
 	// 获取商店对象
 	Shop* getShop() { return _shop; };
 
-	inline bool isInMyBound(struct Command pos);			//判断点是否在我方棋盘内
-	inline bool hasHero(struct Command pos);				//判断该位置是否有棋子
-	inline bool placeHero(Hero* hero,struct Command pos);	//放置英雄
-	int isEnd();											//判定游戏结束
+	void createStandOrigin();								//创建站立区域
+
+	Vec2 getStandPos(int x,int y);							//获取站立块坐标
+
+	POS getSizePos(Vec2 pos);								//获取点阵坐标
+
+	inline int isInStand(Vec2 pos);						//判断点是否在站立区域
+
+	inline bool isInMyBound(struct POS pos);			//判断点是否在我方棋盘内
+	inline bool hasHero(struct POS pos);				//判断该位置是否有棋子
+	inline bool placeHero(Hero* hero,struct POS pos);	//放置英雄
+	int isEnd();										//判定游戏结束
+
 
 	// 在棋盘创建英雄精灵
 	void createHeroInChessBoard(int idxOfHero);
@@ -67,5 +69,17 @@ public:
 
 	// （获得金币等）改变商店金币，允许升级和刷新按钮，并且使得这俩按钮显示为可用状态（注意不要和满级时冲突）
 
+	Sprite* _standOrigin[BDSZ_Y + 2][BDSZ_X];		//站立区域
 
+private:
+	static GameController* _instance;				//实例对象
+	Shop* _shop;									// 记录一个商店对象
+	ChessBoard* _chessBoard;						//虚拟棋盘
+
+	Size _standSize;								//每个站立区域的大小
+	Vec2 _standPos[8];								//每个站立区域的位置(左下角)
+
+	int enemyMoney;									// 敌方金币
+	int enemyExp;									// 敌方经验
+	int enemyLevel;									// 敌方等级
 };

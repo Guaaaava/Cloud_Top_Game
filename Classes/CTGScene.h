@@ -8,6 +8,8 @@ using namespace ui;
 
 #include"Hero.h"
 
+#include "GameController.h"
+
 const float SHOP_HEIGHT = 210.0f;		// 商店卡牌高度
 const float CHESSBOARD_WIDTH = 1150.0f;	// 棋盘图片宽度
 const float CHESSBOARD_HEIGHT = 950.0f;	// 棋盘图片高度
@@ -33,6 +35,7 @@ private:
 	static LayerColor* layer;	// 记录背景层（静态成员）
 
 	Hero* touchingSprite;		// 被选中的英雄
+	Vec2 firstPos;				//被选中的英雄的初始位置
 
 	virtual bool onTouchBegan(Touch* touch, Event* event);	// 按下鼠标的回调
 	virtual void onTouchMoved(Touch* touch, Event* event);	// 移动鼠标的回调

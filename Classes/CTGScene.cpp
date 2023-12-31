@@ -1,6 +1,6 @@
 #include "CTGScene.h"
 #include "ConfigController.h"
-#include "GameController.h"
+#include "SimpleAudioEngine.h"
 
 /****************************************************
  * 功能：初始化界面
@@ -14,6 +14,13 @@ bool CTGScene::init()
 {
 	if (!Scene::init())
 		return false;
+
+	/* 预加载音乐 */
+	auto audio = CocosDenshion::SimpleAudioEngine::getInstance();
+	audio->preloadBackgroundMusic("mainScene/undertale.mp3");
+
+	/* 背景音乐 */
+	audio->playBackgroundMusic("mainScene/undertale.mp3", true);
 
 	// 获取屏幕中心点
 	const auto visibleSize = Director::getInstance()->getVisibleSize();
@@ -64,6 +71,9 @@ bool CTGScene::onTouchBegan(Touch* touch, Event* event)
 	// 获取被选中的精灵
 	touchingSprite = judgePointInSprite(touchPoint);
 
+	//获取初始位置
+	firstPos = touchingSprite->getPosition();
+
 	if (touchingSprite != nullptr)	// 在精灵区域内则返回true
 	{
 		return true;
@@ -82,17 +92,37 @@ void CTGScene::onTouchMoved(Touch* touch, Event* event)
 {
 	touchingSprite->setPosition(touchingSprite->getPosition() + touch->getDelta());
 
-	// 出售区域样式变化
-	auto touchPoint = touch->getLocation();
-	auto spriteSellOrigin = GameController::getInstance()->getShop()->getSellOrigin();
-	auto rectSellOrigin = spriteSellOrigin->getBoundingBox();
+	auto controller = GameController::getInstance();
+
+	auto touchPoint = touch->getLocation();							//获取坐标点
+	auto loc = controller->getSizePos(touchPoint);					//获取点阵坐标
+
+	auto spriteSellOrigin = controller->getShop()->getSellOrigin();	//获取出售区域
+	auto rectSellOrigin = spriteSellOrigin->getBoundingBox();		//获取出售区域碰撞箱
+
 	if (rectSellOrigin.containsPoint(touchPoint))
 	{
 		spriteSellOrigin->setOpacity(255);
-	}
-	else
-	{
+	}// 出售区域样式变化
+	else {
 		spriteSellOrigin->setOpacity(80);
+	}
+
+	if(loc._type==STAND){
+		controller->_standOrigin[loc._y][loc._x]->setVisible(true);//所在位置设为可见
+		for (int i = 0; i < BDSZ_Y + 2; i++) {
+			for (int j = 0; j < BDSZ_X; j++) {
+				if (i != loc._y || j != loc._x)
+					controller->_standOrigin[i][j]->setVisible(false);
+			}
+		}//备战席所有设为不可见
+	}//备战席
+	else {
+		for (int i = 0; i < BDSZ_Y + 2; i++) {
+			for (int j = 0; j < BDSZ_X; j++) {
+				controller->_standOrigin[i][j]->setVisible(false);
+			}
+		}//备战席所有设为不可见
 	}
 }
 
@@ -106,15 +136,28 @@ void CTGScene::onTouchMoved(Touch* touch, Event* event)
  * **************************************************/
 void CTGScene::onTouchEnded(Touch* touch, Event* event)
 {
+	auto controller = GameController::getInstance();
+
 	auto touchEndedPoint = touch->getLocation();
 	auto spriteSellOrigin = GameController::getInstance()->getShop()->getSellOrigin();
 	auto rectSellOrigin = spriteSellOrigin->getBoundingBox();
+
+	auto loc = controller->getSizePos(touchEndedPoint);
 
 	if (rectSellOrigin.containsPoint(touchEndedPoint))
 	{
 		// 卖出英雄、维护商店、棋盘等集合，添加金币，更新标签，更新按钮状态
 		GameController::getInstance()->sellHero(touchingSprite);
 		touchingSprite = nullptr;	// 修改
+	}
+
+	if (loc._type == STAND) {
+		Vec2 pos = controller->_standOrigin[loc._y][loc._x]->getPosition();
+		touchingSprite->setPosition(pos);
+		controller->_standOrigin[loc._y][loc._x]->setVisible(false);//所在位置设为不可见
+	}
+	else {
+		touchingSprite->setPosition(firstPos);
 	}
 }
 
