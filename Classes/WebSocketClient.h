@@ -1,116 +1,45 @@
 #pragma once
-// WebSocketHandler.h
+
 /****************************************************
- * 功能：使用WebSocket控制联机，作为客户端
+ * 功能：使用WebSocketpp控制联机，作为客户端
  * 作者：牟泳祯
- * 时间：2023年12月21日
+ * 时间：2023年12月23日
+ * 说明：以下代码中的websocketpp相关头文件来自WebSocketpp开源库，链接https://github.com/zaphoyd/websocketpp
+  *       实现框架参考websocketpp说明文档，链接https://docs.websocketpp.org/
+  *       根据项目需要进行改动，并添加了自己的方法
  * **************************************************
  * CopyRight 2023 by 牟泳祯
  * **************************************************/
+
  /*
- #ifndef __WEBSOCKET_HANDLER_H__
- #define __WEBSOCKET_HANDLER_H__
+  * Copyright (c) 2014, Peter Thorson. All rights reserved.
+  *
+  * Redistribution and use in source and binary forms, with or without
+  * modification, are permitted provided that the following conditions are met:
+  *     * Redistributions of source code must retain the above copyright
+  *       notice, this list of conditions and the following disclaimer.
+  *     * Redistributions in binary form must reproduce the above copyright
+  *       notice, this list of conditions and the following disclaimer in the
+  *       documentation and/or other materials provided with the distribution.
+  *     * Neither the name of the WebSocket++ Project nor the
+  *       names of its contributors may be used to endorse or promote products
+  *       derived from this software without specific prior written permission.
+  *
+  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  * ARE DISCLAIMED. IN NO EVENT SHALL PETER THORSON BE LIABLE FOR ANY
+  * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  */
 
- #include "cocos2d.h"
- #include "network/WebSocket.h"
-
- class WebSocketHandler : public cocos2d::Ref, public cocos2d::network::WebSocket::Delegate
- {
- public:
-	 using MessageCallback = std::function<void(const std::string& message)>;
-
-	 static WebSocketHandler* getInstance();
-	 bool connectToServer(const std::string& serverAddress);
-	 void send(const std::string& message);
-	 void disconnect();
-	 void setMessageCallback(const MessageCallback& callback);
-
- private:
-	 WebSocketHandler();
-	 virtual ~WebSocketHandler();
-	 bool init();
-
-	 // WebSocket delegate methods
-	 void onOpen(cocos2d::network::WebSocket* ws) override;
-	 void onMessage(cocos2d::network::WebSocket* ws, const cocos2d::network::WebSocket::Data& data) override;
-	 void onClose(cocos2d::network::WebSocket* ws) override;
-	 void onError(cocos2d::network::WebSocket* ws, const cocos2d::network::WebSocket::ErrorCode& error) override;
-
- private:
-	 cocos2d::network::WebSocket* webSocket;
-	 MessageCallback messageCallback;
- };
-
- #endif // __WEBSOCKET_HANDLER_H__
- */
-
- /// 表示websocketpp文档中的写法
- /*
- #include <websocketpp/config/asio_no_tls_client.hpp>
- #include <websocketpp/client.hpp>
-
- class WebSocketManager {
- public:
-	 using client_type = websocketpp::client<websocketpp::config::asio_client>;
-	 ///typedef websocketpp::client<websocketpp::config::asio_client> client;
-	 using connection_ptr = client_type::connection_ptr;
-
-	 static WebSocketManager* getInstance();
-	 void connect(const std::string& serverAddress);
-	 void disconnect();
-	 void sendMessage(const std::string& message);
-
- private:
-	 WebSocketManager();
-	 ~WebSocketManager(); // Add destructor
-
-	 client_type client;
-	 connection_ptr connectionHandle;
-
-	 void onOpen(websocketpp::connection_hdl hdl);
-	 void onClose(websocketpp::connection_hdl hdl);
-	 void onMessage(websocketpp::connection_hdl hdl, client_type::message_ptr msg);
- };
- */
-
- //注意修改代码风格！！！
- /****************************************************
-  * 功能：使用WebSocketpp控制联机，作为客户端
-  * 作者：牟泳祯
-  * 时间：2023年12月23日
-  * 说明：以下代码将作为独立部分进行单元测试
-  * **************************************************
-  * CopyRight 2023 by 牟泳祯
-  * **************************************************/
-  /*
-   * Copyright (c) 2014, Peter Thorson. All rights reserved.
-   *
-   * Redistribution and use in source and binary forms, with or without
-   * modification, are permitted provided that the following conditions are met:
-   *     * Redistributions of source code must retain the above copyright
-   *       notice, this list of conditions and the following disclaimer.
-   *     * Redistributions in binary form must reproduce the above copyright
-   *       notice, this list of conditions and the following disclaimer in the
-   *       documentation and/or other materials provided with the distribution.
-   *     * Neither the name of the WebSocket++ Project nor the
-   *       names of its contributors may be used to endorse or promote products
-   *       derived from this software without specific prior written permission.
-   *
-   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-   * ARE DISCLAIMED. IN NO EVENT SHALL PETER THORSON BE LIABLE FOR ANY
-   * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-   * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-   * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-   * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-   * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-   * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-   */
-
-   // **NOTE:** This file is a snapshot of the WebSocket++ utility client tutorial.
-   // Additional related material can be found in the tutorials/utility_client
-   // directory of the WebSocket++ repository.
+  // **NOTE:** This file is a snapshot of the WebSocket++ utility client tutorial.
+  // Additional related material can be found in the tutorials/utility_client
+  // directory of the WebSocket++ repository.
 
 #include <websocketpp/config/asio_no_tls_client.hpp>
 #include <websocketpp/client.hpp>
@@ -153,7 +82,7 @@ public:
         m_error_reason = con->get_ec().message();
     }
 
-    void on_close(client * c, websocketpp::connection_hdl hdl) {
+    void on_close(client* c, websocketpp::connection_hdl hdl) {
         m_status = "Closed";
         client::connection_ptr con = c->get_con_from_hdl(hdl);
         std::stringstream s;
@@ -163,6 +92,7 @@ public:
         m_error_reason = s.str();
     }
 
+    // 收到来自服务器的消息
     void on_message(websocketpp::connection_hdl, client::message_ptr msg) {
         if (msg->get_opcode() == websocketpp::frame::opcode::text) {
             m_messages.push_back("<< " + msg->get_payload());
@@ -170,6 +100,8 @@ public:
         else {
             m_messages.push_back("<< " + websocketpp::utility::to_hex(msg->get_payload()));
         }
+        std::string current_message = m_messages.back();
+
     }
 
     websocketpp::connection_hdl get_hdl() const {
@@ -250,7 +182,6 @@ public:
 
     int connect(std::string const& uri) {
         websocketpp::lib::error_code ec;
-
         client::connection_ptr con = m_endpoint.get_connection(uri, ec);
 
         if (ec) {
@@ -307,6 +238,7 @@ public:
         }
     }
 
+    // 向服务器发送消息
     void send(int id, std::string message) {
         websocketpp::lib::error_code ec;
 

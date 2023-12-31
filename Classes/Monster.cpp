@@ -51,8 +51,9 @@ void Monster::monsterAction()
  * _lv=1
  *_skill_ap=1.5*_ap
  * _max_mp=4
- * 作者：卞思涵
+ * 作者：牟泳祯
  ****************************************************/
+/*
 bool BlackWerewolf::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
@@ -118,6 +119,7 @@ void BlackWerewolf::monsterRunToEnemyPos(Vec2& end_pos)
 	auto sequence = Sequence::create(moveTo, moveCallback, nullptr);
 	_sprite->runAction(sequence);
 }
+*/
 /****************************************************
  * 功能：SkeletonWarrior类成员函数
  * _hp=350
@@ -126,8 +128,9 @@ void BlackWerewolf::monsterRunToEnemyPos(Vec2& end_pos)
  * _lv=1
  *_skill_ap=1.5*_ap
  * _max_mp=5
- * 作者：卞思涵
+ * 作者：牟泳祯
  ****************************************************/
+/*
 bool SkeletonWarrior::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
@@ -194,6 +197,7 @@ void SkeletonWarrior::monsterRunToEnemyPos(Vec2& end_pos)
 	auto sequence = Sequence::create(moveTo, moveCallback, nullptr);
 	_sprite->runAction(sequence);
 }
+*/
 /****************************************************
  * 功能：BlueSlime类成员函数
  * _hp=290
@@ -202,7 +206,7 @@ void SkeletonWarrior::monsterRunToEnemyPos(Vec2& end_pos)
  * _lv=1
  *_skill_ap=1.5*_ap
  * _max_mp=4
- * 作者：卞思涵
+ * 作者：牟泳祯
  ****************************************************/
 bool BlueSlime::init(Vec2& start_pos)
 {
@@ -213,7 +217,7 @@ bool BlueSlime::init(Vec2& start_pos)
 	_mp = 0;
 	_lv = 1;
 	_max_mp = 4;
-	_skill_ap = 1.5 * _ap;
+	//skill_ap = 1.5 * _ap;
 	return true;
 }
 
@@ -221,7 +225,7 @@ bool BlueSlime::init(Vec2& start_pos)
 void BlueSlime::monsterAttack()
 {
 	// 创建攻击帧动画并绑定回调函数
-	_attack = createPlistAnimation("BlueSlime/BlueSlime_Attack.plist", "_BlueSlime_Attack", 6);
+	_attack = createPlistAnimation("Samurai/Samurai_Attack.plist", "_Samurai_Attack", 4);
 	if (_reverse)
 		_sprite->setFlippedX(true);
 	auto animate = Animate::create(_attack);

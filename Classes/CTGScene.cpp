@@ -1,5 +1,6 @@
 #include "CTGScene.h"
 #include "ConfigController.h"
+#include "Hero.h"
 
 /****************************************************
  * 功能：初始化界面
@@ -39,7 +40,18 @@ bool CTGScene::init()
 
 
 	// 将它们添加到场景中
+	
+	//Samurai* test = Samurai::create();
+	//test->init(Vec2(0, 0));
+	//test->createHealthBar();
+	//test->updateHealthBarPosition();
+	//test->updateHealthBarDisplay();
+	//this->addChild(test);
 	this->addChild(sam);
+	//sam->updateHealthBarPosition();
+	//sam->updateHealthBarDisplay();
+	//this->addChild(blueSlime);
+	/*
 	this->addChild(kni);
 	this->addChild(kun);
 	this->addChild(lig);
@@ -49,16 +61,29 @@ bool CTGScene::init()
 	this->addChild(pea);
 	this->addChild(com);
 	this->addChild(ber);
-	//sam->heroRunToEnemyPos(Vec2(100,100));
-	//kni->heroRunToEnemyPos(Vec2(100,100));
-	//kun->heroRunToEnemyPos(Vec2(100, 100));
-	//lig->heroRunToEnemyPos(Vec2(100, 100));
-	//fir->heroRunToEnemyPos(Vec2(100, 100));
-	//wan->heroRunToEnemyPos(Vec2(100, 100));
-	//mon->heroRunToEnemyPos(Vec2(100, 100));
-	//pea->heroRunToEnemyPos(Vec2(100, 100));
-	//com->heroRunToEnemyPos(Vec2(100, 100));
+	*/
+	//this->addChild(bla);
+	//this->addChild(ske);
+	//this->addChild(blu);
+
+	sam->heroRunToEnemyPos(Vec2(100, 100));
+	//sam->heroDead();
+	/*
+	kni->heroRunToEnemyPos(Vec2(100,100));
+	kun->heroRunToEnemyPos(Vec2(100, 100));
+	lig->heroRunToEnemyPos(Vec2(100, 100));
+	fir->heroRunToEnemyPos(Vec2(100, 100));
+	wan->heroRunToEnemyPos(Vec2(100, 100));
+	mon->heroRunToEnemyPos(Vec2(100, 100));
+	pea->heroRunToEnemyPos(Vec2(100, 100));
+	com->heroRunToEnemyPos(Vec2(100, 100));
 	ber->heroRunToEnemyPos(Vec2(100, 100));
+	*/
+	//blu->monsterAttack();
+	//bla->monsterRunToEnemyPos(Vec2(0, 100));
+	//ske->monsterRunToEnemyPos(Vec2(0, 100));
+	//blu->monsterRunToEnemyPos(Vec2(0, 100));
+	//lu->monsterAttack();
 	// 棋盘左侧中心，右侧中心
 	Vec2 leftOrigin = origin + Vec2(visibleSize.width * 0.05f, visibleSize.height / 2);
 	Vec2 rightOrigin = origin + Vec2(visibleSize.width * 0.95f, visibleSize.height / 2);

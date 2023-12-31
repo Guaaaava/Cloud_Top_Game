@@ -1,8 +1,16 @@
 #include"Hero.h"
+#include <iostream>
+
 
 bool Hero::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
+	// 调用创建头顶血条函数
+	//createHealthBar();
+
+	// 设置初始位置
+	//setPosition(start_pos);
+
 	return true;
 }
 
@@ -43,6 +51,50 @@ void Hero::heroAction()
 		_mp++;
 	}
 }
+
+void Hero::createHealthBar()
+{
+	// 创建头顶血条
+	_healthBar = ProgressTimer::create(Sprite::create("StatusBar/HealthBar.png"));
+	_healthBar->setLocalZOrder(1);
+	//_healthBar->setOpacity(255);
+	_healthBar->setType(ProgressTimerType::BAR);
+	_healthBar->setMidpoint(Vec2(0, 0.5));
+	_healthBar->setBarChangeRate(Vec2(1, 0));
+	_healthBar->setPercentage(100.0f);  // 初始为满血
+	//_healthBar->setPosition(Vec2(getContentSize().width / 2, getContentSize().height + 10));
+	_healthBar->setPosition(Vec2(100, 100));
+	this->addChild(_healthBar);
+}
+
+void Hero::updateHealthBarPosition()
+{
+	// 更新血条位置
+	
+	if (_healthBar)
+	{
+		//_healthBar->setPosition(Vec2(0, _sprite->getContentSize().height));
+		//_healthBar->setPosition(Vec2(getContentSize().width / 2, getContentSize().height + 10));
+		//CCLOG("HealthBar is at (%f , %f) !");
+		//std::cout << "HealthBar is at (%f , %f) !" << getContentSize().width / 2<<getContentSize().height + 10<<std::endl;
+		//std::cout.flush();
+		//exit(0);
+	}
+	
+	// 更新头顶血条位置
+	//_healthBar->setPosition(Vec2(getContentSize().width / 2, getContentSize().height + 10));
+
+}
+
+void Hero::updateHealthBarDisplay()
+{
+	// 更新血条显示
+	if (_healthBar)
+	{
+		float percentage = (_hp / _max_hp) * 100;  // 根据当前血量计算百分比
+		_healthBar->setPercentage(percentage);
+	}
+}
 /****************************************************
  * 功能：Samurai类成员函数
  * _hp=320
@@ -51,6 +103,7 @@ void Hero::heroAction()
  * _lv=1
  *_skill_ap=1.5*_ap
  * _max_mp=4
+ * _max_hp=320
  * 作者：卞思涵
  ****************************************************/
 bool Samurai::init(Vec2& start_pos)
@@ -63,6 +116,10 @@ bool Samurai::init(Vec2& start_pos)
 	_lv = 1;
 	_max_mp = 4;
 	_skill_ap = 1.5 * _ap;
+	_max_hp = _hp;
+	createHealthBar();
+	updateHealthBarDisplay();
+	updateHealthBarPosition();
 	return true;
 }
 
@@ -134,7 +191,13 @@ void Samurai::heroRunToEnemyPos(Vec2& end_pos)
 		});
 	auto sequence = Sequence::create(moveTo, moveCallback, nullptr);
 	_sprite->runAction(sequence);
+	createHealthBar();
+	updateHealthBarDisplay();
+	updateHealthBarPosition();
 }
+
+
+
 /****************************************************
  * 功能：Knight类成员函数
  * _hp=350
@@ -143,6 +206,7 @@ void Samurai::heroRunToEnemyPos(Vec2& end_pos)
  * _lv=1
  *_skill_ap=1.5*_ap
  * _max_mp=5
+ * _max_hp=350
  * 作者：卞思涵
  ****************************************************/
 bool Knight::init(Vec2& start_pos)
@@ -155,6 +219,7 @@ bool Knight::init(Vec2& start_pos)
 	_lv = 1;
 	_max_mp = 5;
 	_skill_ap = 1.5 * _ap;
+	//_max_hp = _hp;
 	return true;
 }
 
@@ -247,6 +312,7 @@ bool Kunoichi::init(Vec2& start_pos)
 	_lv = 1;
 	_max_mp = 4;
 	_skill_ap = 1.5 * _ap;
+	//_max_hp = _hp;
 	return true;
 }
 
@@ -340,6 +406,7 @@ bool LightningMage::init(Vec2& start_pos)
 	_lv = 1;
 	_max_mp = 5;
 	_skill_ap = 1.7 * _ap;
+	//_max_hp = _hp;
 	return true;
 }
 
@@ -434,6 +501,7 @@ bool FireVizard::init(Vec2& start_pos)
 	_lv = 1;
 	_max_mp = 6;
 	_skill_ap = 2.5 * _ap;
+	//_max_hp = _hp;
 	return true;
 }
 
@@ -528,6 +596,7 @@ bool WandererMagican::init(Vec2& start_pos)
 	_lv = 1;
 	_max_mp = 5;
 	_skill_ap = 2 * _ap;
+	//_max_hp = _hp;
 	return true;
 }
 
@@ -620,6 +689,7 @@ bool NinjaMonk::init(Vec2& start_pos)
 	_lv = 1;
 	_max_mp = 2;
 	_skill_ap = 1.1 * _ap;
+	//_max_hp = _hp;
 	return true;
 }
 
@@ -712,6 +782,7 @@ bool NinjaPeasant::init(Vec2& start_pos)
 	_lv = 1;
 	_max_mp = 3;
 	_skill_ap = 1.2 * _ap;
+	//_max_hp = _hp;
 	return true;
 }
 
@@ -804,6 +875,7 @@ bool SamuraiCommander::init(Vec2& start_pos)
 	_lv = 1;
 	_max_mp = 4;
 	_skill_ap = 1.5 * _ap;
+	//_max_hp = _hp;
 	return true;
 }
 
@@ -896,6 +968,7 @@ bool Berserker::init(Vec2& start_pos)
 	_lv = 1;
 	_max_mp = 3;
 	_skill_ap = 2 * _ap;
+	//_max_hp = _hp;
 	return true;
 }
 

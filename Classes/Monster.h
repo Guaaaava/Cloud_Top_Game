@@ -19,9 +19,9 @@ public:
 		{
 			if ((*iter)->_hp > 0)
 			{
-				if ((*iter)->_mp >= (*iter)->_max_mp)
-					_enemy_ap += (*iter)->_skill_ap;
-				else
+				if ((*iter)->_mp < (*iter)->_max_mp)
+				//	_enemy_ap += (*iter)->_skill_ap;
+				//else
 					_enemy_ap += (*iter)->_ap;
 			}
 		}
@@ -39,6 +39,7 @@ public:
 	virtual void monsterAttack() = 0;
 	// µœ÷”¢–€À¿Õˆ∂Øª≠
 	virtual void monsterDead() = 0;
+	//virtual void monsterSkill() = 0;
 
 protected:
 	double _enemy_ap = 0;
@@ -49,14 +50,15 @@ protected:
 	double _mp;
 	int _lv;
 	double _max_mp;
-	double _skill_ap;
+	//double _skill_ap;
 	Sprite* _sprite;
 	Animation* _run;
 	Animation* _attack;
 	Animation* _dead;
+	//Animation* _skill;
 	std::list<Monster*>_l;
 };
-
+/*
 class BlackWerewolf :public Monster
 {
 public:
@@ -78,6 +80,8 @@ public:
 	void monsterRunToEnemyPos(Vec2& end_pos);
 
 };
+*/
+
 class BlueSlime :public Monster
 {
 public:
@@ -86,5 +90,5 @@ public:
 	void monsterAttack();
 	void monsterDead();
 	void monsterRunToEnemyPos(Vec2& end_pos);
-
+	//void heroSkill();
 };

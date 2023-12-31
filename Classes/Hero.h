@@ -12,7 +12,7 @@ public:
 	//英雄选择动作核心逻辑
 	void heroAction();
 	//升lv级
-	void upLevel(int lv) { _lv += lv; _hp *= _lv; _ap *= _lv; };
+	void upLevel(int lv) { _lv += lv; _hp *= _lv; _ap *= _lv;  _max_hp = _hp; };
 	//每回合减少的血量
 	void getHurted() {
 		for (std::list<Hero*>::iterator iter = _l.begin(); iter != _l.end(); iter++)
@@ -41,6 +41,13 @@ public:
 	virtual void heroDead() = 0;
 	//移动到某一点并攻击
 	virtual void heroSkill() = 0;
+	// 创建头顶血条
+	void createHealthBar();
+	// 更新头顶血条位置
+	void updateHealthBarPosition();
+	// 更新头顶血条显示
+	void updateHealthBarDisplay();
+	
 
 protected:
 	double _enemy_ap = 0;
@@ -58,6 +65,8 @@ protected:
 	Animation* _dead;
 	Animation* _skill;
 	std::list<Hero*>_l;
+	ProgressTimer* _healthBar;  // 头顶血条
+	double _max_hp;
 };
 
 class Samurai :public Hero
@@ -69,7 +78,7 @@ public:
 	void heroDead();
 	void heroRunToEnemyPos(Vec2& end_pos);
 	void heroSkill();
-
+	
 };
 
 class Knight :public Hero

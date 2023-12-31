@@ -7,6 +7,7 @@ USING_NS_CC;			// 相当于 using namespace cocos2d;
 using namespace ui;
 
 #include"Hero.h"
+#include "Monster.h"
 
 #define WORDS_GAME_NAME 1001	// “金铲铲之战”编码
 #define WORDS_START     1002	// “开始”编码
@@ -55,8 +56,9 @@ private:
 	// 创建一个商店结点
 	void createShopNode();
 
-
+	// 英雄
 	Samurai* sam = Samurai::create();
+	/*
 	Knight* kni = Knight::create();
 	Kunoichi* kun = Kunoichi::create();
 	LightningMage* lig = LightningMage::create();
@@ -66,4 +68,11 @@ private:
 	NinjaPeasant* pea = NinjaPeasant::create();
 	SamuraiCommander* com = SamuraiCommander::create();
 	Berserker* ber = Berserker::create();
+
+	// 野怪
+	//BlackWerewolf* bla = BlackWerewolf::create();
+	//SkeletonWarrior* ske = SkeletonWarrior::create();
+
+	BlueSlime* blu = BlueSlime::create();
+	*/
 };

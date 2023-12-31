@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Dead (0_0).png</key>
+            <key>1_BlueSlime_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -21,7 +21,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>Dead (0_1).png</key>
+            <key>2_BlueSlime_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -38,7 +38,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>Dead (0_2).png</key>
+            <key>3_BlueSlime_Dead</key>
             <dict>
                 <key>aliases</key>
                 <array/>
