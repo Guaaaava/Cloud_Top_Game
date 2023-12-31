@@ -24,6 +24,9 @@ class CTGScene : public Scene
 public:
 	CREATE_FUNC(CTGScene);		// 创建 create() 函数
 
+	CTGScene();                 //构造函数
+
+	~CTGScene();                //析构函数
 	virtual bool init();		// 初始化场景
 
 	static LayerColor* getLayer() { return layer; };	// 获取背景层（静态成员）
