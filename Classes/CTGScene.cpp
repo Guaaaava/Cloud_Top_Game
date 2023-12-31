@@ -1,6 +1,8 @@
 #include "CTGScene.h"
 #include "ConfigController.h"
-#include "Hero.h"
+#include "WebSocketClient.h"
+#include "WebSocketServer.h"
+
 
 /****************************************************
  * 功能：初始化界面
@@ -38,6 +40,36 @@ bool CTGScene::init()
 	layer->addChild(boardNode, 1);			// 对战场景 z 值为 1
 	prt_backGround = boardNode;
 
+	// 接下来测试联机
+	bool done = false;
+	utility_server server;
+
+	// 在单独的线程中启动服务器
+	std::thread serverThread([&server]() {
+		server.run();
+		});
+
+	// 连接客户端到服务器
+	websocket_endpoint client;
+
+	int clientId = client.connect("http://localhost:9002");
+	
+	//std::string message;
+
+	//connection_metadata::ptr metadata = endpoint.get_metadata(endpointId);
+
+	//metadata->get_id();
+
+	// 清理
+	//serverThread.join();
+
+
+
+
+
+
+
+
 
 	// 将它们添加到场景中
 	
@@ -48,6 +80,7 @@ bool CTGScene::init()
 	//test->updateHealthBarDisplay();
 	//this->addChild(test);
 	this->addChild(sam);
+	
 	//sam->updateHealthBarPosition();
 	//sam->updateHealthBarDisplay();
 	//this->addChild(blueSlime);
@@ -67,12 +100,24 @@ bool CTGScene::init()
 	//this->addChild(blu);
 
 	sam->heroRunToEnemyPos(Vec2(100, 100));
+	//sam->heroSkill();
 	//sam->heroDead();
+	// 创建血条
+	
+	//auto healthBar = Sprite::create("StatusBar/HealthBar.png");
+	//healthBar->setAnchorPoint(sam->getPosition());
+	//healthBar->setPosition(Vec2(Director::getInstance()->getVisibleSize() / 2));
+	//sam->addChild(healthBar);
+	//healthBar->setLocalZOrder(10000);
+	//MoveTo* moveTo = MoveTo::create(3, Vec2(200,200));
+	//healthBar->runAction(moveTo);
+	//Vec2 anchorPoint = sprite->getAnchorPoint();
+
 	/*
 	kni->heroRunToEnemyPos(Vec2(100,100));
 	kun->heroRunToEnemyPos(Vec2(100, 100));
 	lig->heroRunToEnemyPos(Vec2(100, 100));
-	fir->heroRunToEnemyPos(Vec2(100, 100));
+	//fir->heroRunToEnemyPos(Vec2(100, 100));
 	wan->heroRunToEnemyPos(Vec2(100, 100));
 	mon->heroRunToEnemyPos(Vec2(100, 100));
 	pea->heroRunToEnemyPos(Vec2(100, 100));
@@ -82,7 +127,10 @@ bool CTGScene::init()
 	//blu->monsterAttack();
 	//bla->monsterRunToEnemyPos(Vec2(0, 100));
 	//ske->monsterRunToEnemyPos(Vec2(0, 100));
-	//blu->monsterRunToEnemyPos(Vec2(0, 100));
+	//blu->setLocalZOrder(10000);
+	BlueSlime* blu = BlueSlime::create();
+	this->addChild(blu);
+	blu->monsterRunToEnemyPos(Vec2(0, 100));
 	//lu->monsterAttack();
 	// 棋盘左侧中心，右侧中心
 	Vec2 leftOrigin = origin + Vec2(visibleSize.width * 0.05f, visibleSize.height / 2);
@@ -224,3 +272,10 @@ void CTGScene::createShopNode()
 	// shopNode->setPosition()
 	prt_backGround->addChild(shopNode, 4);	// 商店 z 值为 4
 }
+
+void CTGScene::upHeros()
+{
+	
+}
+
+

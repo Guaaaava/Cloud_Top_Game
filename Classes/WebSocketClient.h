@@ -52,6 +52,7 @@
 #include <map>
 #include <string>
 #include <sstream>
+#include <list>
 
 typedef websocketpp::client<websocketpp::config::asio_client> client;
 
@@ -121,6 +122,8 @@ public:
     }
 
     friend std::ostream& operator<< (std::ostream& out, connection_metadata const& data);
+    std::vector<std::string> m_messages;
+    std::list<int> hero_list;
 private:
     int m_id;
     websocketpp::connection_hdl m_hdl;
@@ -128,19 +131,49 @@ private:
     std::string m_uri;
     std::string m_server;
     std::string m_error_reason;
-    std::vector<std::string> m_messages;
+   
 };
 
-std::ostream& operator<< (std::ostream& out, connection_metadata const& data) {
-    out << "> URI: " << data.m_uri << "\n"
-        << "> Status: " << data.m_status << "\n"
-        << "> Remote Server: " << (data.m_server.empty() ? "None Specified" : data.m_server) << "\n"
-        << "> Error/close reason: " << (data.m_error_reason.empty() ? "N/A" : data.m_error_reason) << "\n";
-    out << "> Messages Processed: (" << data.m_messages.size() << ") \n";
+std::ostream& operator<< (std::ostream& out, connection_metadata & data) {
+    //out << "> URI: " << data.m_uri << "\n"
+      //  << "> Status: " << data.m_status << "\n"
+        //<< "> Remote Server: " << (data.m_server.empty() ? "None Specified" : data.m_server) << "\n"
+        //<< "> Error/close reason: " << (data.m_error_reason.empty() ? "N/A" : data.m_error_reason) << "\n";
+    //out << "> Messages Processed: (" << data.m_messages.size() << ") \n";
 
     std::vector<std::string>::const_iterator it;
     for (it = data.m_messages.begin(); it != data.m_messages.end(); ++it) {
-        out << *it << "\n";
+        const std::string myString = *it;
+        const std::string dst = "up";
+        const std::string tag = "<<";
+        //std::cout << "origin = " << *it << std::endl;
+        if (myString.find(dst) != -1 && myString.find(tag) != -1) {
+            // 从字符串末尾开始查找数字
+            size_t pos = myString.size();
+            while (pos > 0 && std::isdigit(myString[pos - 1])) {
+                --pos;
+            }
+
+            // 提取末尾的数字
+            std::string extractedNumber = myString.substr(pos);
+
+            // 将提取的数字转换为整数
+            if (!extractedNumber.empty()) {
+                try {
+                    int number = std::stoi(extractedNumber);
+                    std::cout << number << std::endl;
+                    data.hero_list.push_back(number);
+                }
+                catch (const std::exception& e) {
+                    std::cerr << "Error converting to integer: " << e.what() << std::endl;
+                }
+            }
+            else {
+                std::cout << "No number found at the end of the string." << std::endl;
+            }
+
+        }
+
     }
 
     return out;
@@ -257,6 +290,8 @@ public:
         metadata_it->second->record_sent_message(message);
     }
 
+    
+
     connection_metadata::ptr get_metadata(int id) const {
         con_list::const_iterator metadata_it = m_connection_list.find(id);
         if (metadata_it == m_connection_list.end()) {
@@ -266,6 +301,50 @@ public:
             return metadata_it->second;
         }
     }
+
+    
+
+    /*
+    void connectToServer()
+    {
+        bool done = false;
+        utility_server server;
+
+        // 在单独的线程中启动服务器
+        std::thread serverThread([&server]() {
+            server.run();
+            });
+
+        // 连接客户端到服务器
+        
+
+        int endpointId = websocket_endpoint::connect("http://localhost:9002");
+
+        std::string message;
+
+        connection_metadata::ptr metadata = endpoint.get_metadata(endpointId);
+
+        metadata->get_id();
+
+        // 清理
+        serverThread.join();
+    }
+    void connectToServer()
+    {
+        utility_server server;
+        // 在单独的线程中启动服务器
+        std::thread serverThread([&server]() {
+            server.run();
+            });
+
+        // 连接客户端到服务器
+
+
+        int endpointId = websocket_endpoint::connect("http://localhost:9002");
+    }
+    */
+
+
 private:
     typedef std::map<int, connection_metadata::ptr> con_list;
 

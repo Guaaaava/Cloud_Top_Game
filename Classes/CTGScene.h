@@ -30,7 +30,7 @@ public:
 
 	// 创建一个通用按钮
 	static MenuItemImage* createGameButton(std::string name, const ccMenuCallback& callback);
-
+	
 private:
 	// 记录背景层
 	Node* prt_backGround;
@@ -56,8 +56,12 @@ private:
 	// 创建一个商店结点
 	void createShopNode();
 
+	void upHeros();
 	// 英雄
 	Samurai* sam = Samurai::create();
+	BlueSlime* blu = BlueSlime::create();
+	
+
 	/*
 	Knight* kni = Knight::create();
 	Kunoichi* kun = Kunoichi::create();
@@ -73,6 +77,8 @@ private:
 	//BlackWerewolf* bla = BlackWerewolf::create();
 	//SkeletonWarrior* ske = SkeletonWarrior::create();
 
-	BlueSlime* blu = BlueSlime::create();
 	*/
+	
+	
+
 };
