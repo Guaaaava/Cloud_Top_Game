@@ -61,9 +61,10 @@ private:
 
 	CheckBox* createRateCheckbox(Vec2 pos, const CheckBox::ccCheckBoxCallback& callback);	//创建帧率复选框
 
-	Label* createMyLabel(std::string& text,Vec2 pos);										//创建标签
+	Label* createLabel(const std::string& text, Vec2 pos);										//创建标签
 
-	Button* createCloseBtn(Vec2 pos, const Button::ccWidgetClickCallback& callback);		//创建退出按钮
+	Button* SETTINGSScene::createButton(const std::string& normalImage,
+		const std::string& selectedImage, Vec2 pos, const Button::ccWidgetClickCallback& callback);	//创建退出按钮
 
 	void musicSliderCallBack(Ref* pSender);													//音乐滑动条回调函数
 
