@@ -5,11 +5,6 @@
 bool Hero::init(Vec2& start_pos)
 {
 	if (!Sprite::init())return false;
-	// 调用创建头顶血条函数
-	//createHealthBar();
-
-	// 设置初始位置
-	//setPosition(start_pos);
 
 	return true;
 }
@@ -33,37 +28,56 @@ void Hero::heroAction()
 {
 	if (_hp <= 0)
 	{
+		_mp = 0;
 		_sprite->setVisible(false); // 隐藏精灵
 		this->heroDead();
 	}
 	else if (_mp >= _max_mp)
 	{
+		_hp -= 20;
+		_hp < 0 ? 0 : _hp;
 		_sprite->setVisible(false); // 隐藏精灵
+		schedule(CC_SCHEDULE_SELECTOR(Samurai::updateMagicBar), 0.1f);
 		this->heroSkill();
 		this->getHurted();
 		_mp = 0; // 重置 mp
 	}
 	else
 	{
+		_hp -= 20;
+		_hp < 0 ? 0 : _hp;
 		_sprite->setVisible(false); // 隐藏精灵
+		schedule(CC_SCHEDULE_SELECTOR(Samurai::updateHealthBar), 0.1f);
+		schedule(CC_SCHEDULE_SELECTOR(Samurai::updateMagicBar), 0.1f);
 		this->heroAttack();
 		this->getHurted();
 		_mp++;
 	}
+
 }
 
 void Hero::createHealthBar()
 {
 	// 创建头顶血条
 	_healthBar = ProgressTimer::create(Sprite::create("StatusBar/HealthBar.png"));
-	_healthBar->setLocalZOrder(1);
+	_healthBar->setLocalZOrder(10000);
+	// 设置透明度
 	//_healthBar->setOpacity(255);
+
 	_healthBar->setType(ProgressTimerType::BAR);
 	_healthBar->setMidpoint(Vec2(0, 0.5));
 	_healthBar->setBarChangeRate(Vec2(1, 0));
 	_healthBar->setPercentage(100.0f);  // 初始为满血
-	//_healthBar->setPosition(Vec2(getContentSize().width / 2, getContentSize().height + 10));
-	_healthBar->setPosition(Vec2(100, 100));
+	_healthBar->setAnchorPoint(Vec2(0, 0.5)); // 设置锚点在血条的左侧中间
+	// 获取英雄的锚点
+	Vec2 anchorPoint = _postion;
+	// 计算血条的位置（在锚点上方）
+	//Vec2 healthBarPosition = Vec2(this->getContentSize().width * anchorPoint.x,
+		//this->getContentSize().height * (1.0 + anchorPoint.y));
+	Vec2 healthBarPosition = Vec2(anchorPoint.x - 60, anchorPoint.y + 100);
+	_healthBar->setPosition(healthBarPosition);
+	_healthBar->setScaleY(0.5f);
+	//_healthBar->setPosition(Vec2(100, 100));
 	this->addChild(_healthBar);
 }
 
@@ -73,27 +87,81 @@ void Hero::updateHealthBarPosition()
 	
 	if (_healthBar)
 	{
-		//_healthBar->setPosition(Vec2(0, _sprite->getContentSize().height));
-		//_healthBar->setPosition(Vec2(getContentSize().width / 2, getContentSize().height + 10));
-		//CCLOG("HealthBar is at (%f , %f) !");
-		//std::cout << "HealthBar is at (%f , %f) !" << getContentSize().width / 2<<getContentSize().height + 10<<std::endl;
-		//std::cout.flush();
-		//exit(0);
+		_healthBar->setPosition(Vec2(0, _sprite->getContentSize().height));
+		_healthBar->setPosition(Vec2(getContentSize().width / 2, getContentSize().height + 10));
 	}
 	
 	// 更新头顶血条位置
 	//_healthBar->setPosition(Vec2(getContentSize().width / 2, getContentSize().height + 10));
-
 }
 
-void Hero::updateHealthBarDisplay()
-{
+void Hero::updateHealthBar(float dt) {
+	// 模拟英雄的血量变化（实际中应根据游戏逻辑处理）
+	_hp -= 1;
+
 	// 更新血条显示
-	if (_healthBar)
-	{
-		float percentage = (_hp / _max_hp) * 100;  // 根据当前血量计算百分比
-		_healthBar->setPercentage(percentage);
+	float healthPercentage;
+	if (_hp <= 0)
+		healthPercentage = 0;
+	else
+		healthPercentage = static_cast<float>(_hp) / _max_hp * 100.0f;
+	_healthBar->setScaleX(healthPercentage / 100.0f);
+
+	// 如果血量小于等于0，可以在这里执行相应的逻辑，比如英雄死亡
+	if (_hp <= 0) {
+		unschedule(CC_SCHEDULE_SELECTOR(Hero::updateHealthBar));
+		// 在这里执行相应的逻辑，比如游戏结束等
 	}
+}
+
+void Hero::createMagicBar()
+{
+	// 创建头顶蓝条
+	_magicBar = ProgressTimer::create(Sprite::create("StatusBar/MagicBar.png"));
+	_magicBar->setLocalZOrder(10000);
+	// 设置透明度
+	
+
+	_magicBar->setType(ProgressTimerType::BAR);
+	_magicBar->setMidpoint(Vec2(0, 0.5));
+	_magicBar->setBarChangeRate(Vec2(1, 0));
+	_magicBar->setPercentage(100);  // 初始为满血
+	_magicBar->setOpacity(0);
+	_magicBar->setAnchorPoint(Vec2(0, 0.5)); // 设置锚点在蓝条的左侧中间
+	// 获取英雄的锚点
+	Vec2 anchorPoint = _postion;
+	// 计算蓝条的位置（在锚点上方）
+	Vec2 healthBarPosition = Vec2(anchorPoint.x - 60, anchorPoint.y + 90);
+	_magicBar->setPosition(healthBarPosition);
+	_magicBar->setScaleY(0.5f);
+	//_magicBar->setPosition(Vec2(100, 100));
+	this->addChild(_magicBar);
+}
+
+void Hero::updateMagicBarPosition()
+{
+	// 更新蓝条位置
+
+	if (_magicBar)
+	{
+		_magicBar->setPosition(Vec2(0, _sprite->getContentSize().height));
+		_magicBar->setPosition(Vec2(getContentSize().width / 2, getContentSize().height + 10));
+	}
+}
+
+void Hero::updateMagicBar(float dt) {
+	// 模拟英雄的蓝量变化（实际中应根据游戏逻辑处理）
+	
+	// 更新蓝条显示
+	float magicPercentage;
+	if (_mp < 0)
+		magicPercentage = 0;
+	else if (_mp > _max_mp)
+		magicPercentage = _max_mp;
+	else
+		magicPercentage = static_cast<float>(_mp) / _max_mp * 100.0f;
+	_magicBar->setOpacity(255);
+	_magicBar->setScaleX(magicPercentage / 100.0f);
 }
 /****************************************************
  * 功能：Samurai类成员函数
@@ -117,9 +185,10 @@ bool Samurai::init(Vec2& start_pos)
 	_max_mp = 4;
 	_skill_ap = 1.5 * _ap;
 	_max_hp = _hp;
-	createHealthBar();
-	updateHealthBarDisplay();
-	updateHealthBarPosition();
+	this->createHealthBar();
+	this->createMagicBar();
+	//this->updateHealthBarDisplay();
+	//this->updateHealthBarPosition();
 	return true;
 }
 
@@ -179,11 +248,17 @@ void Samurai::heroRunToEnemyPos(Vec2& end_pos)
 	}
 	auto runAnimate = Animate::create(_run);
 	auto runAction = RepeatForever::create(runAnimate);
+
 	_sprite->runAction(runAction); // 播放跑步动画
 
 	// 创建移动动作
 	MoveTo* moveTo = MoveTo::create(3, end_pos); // 移动到目标位置
+	MoveTo* healthBarMoveTo = MoveTo::create(3, Vec2(end_pos.x - 40, end_pos.y + 100));
+	MoveTo* magicBarMoveTo = MoveTo::create(3, Vec2(end_pos.x - 40, end_pos.y + 90));
 	_postion = end_pos;//更新英雄坐标
+
+	_healthBar->runAction(healthBarMoveTo);//
+	_magicBar->runAction(magicBarMoveTo);
 	auto moveCallback = CallFunc::create([this]() {
 		_sprite->stopAllActions(); // 停止跑步动画
 		_sprite->setVisible(false); // 隐藏精灵
@@ -191,9 +266,11 @@ void Samurai::heroRunToEnemyPos(Vec2& end_pos)
 		});
 	auto sequence = Sequence::create(moveTo, moveCallback, nullptr);
 	_sprite->runAction(sequence);
-	createHealthBar();
-	updateHealthBarDisplay();
-	updateHealthBarPosition();
+	// 使用调度器定时更新血条
+	
+	//createHealthBar();
+	//updateHealthBarDisplay();
+	//updateHealthBarPosition();
 }
 
 

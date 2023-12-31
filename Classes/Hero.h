@@ -46,8 +46,14 @@ public:
 	// 更新头顶血条位置
 	void updateHealthBarPosition();
 	// 更新头顶血条显示
-	void updateHealthBarDisplay();
-	
+	//void updateHealthBarDisplay();
+	void updateHealthBar(float dt);
+	// 创建头顶蓝条
+	void createMagicBar();
+	// 更新头顶蓝条位置
+	void updateMagicBarPosition();
+	// 更新头顶蓝条显示
+	void updateMagicBar(float dt);
 
 protected:
 	double _enemy_ap = 0;
@@ -66,6 +72,7 @@ protected:
 	Animation* _skill;
 	std::list<Hero*>_l;
 	ProgressTimer* _healthBar;  // 头顶血条
+	ProgressTimer* _magicBar;  // 头顶蓝条
 	double _max_hp;
 };
 
