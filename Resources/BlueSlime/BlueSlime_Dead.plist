@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Dead (0_0).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.471074,0.132075}</string>
+                <key>spriteOffset</key>
+                <string>{-5,-9}</string>
+                <key>spriteSize</key>
+                <string>{49,29}</string>
+                <key>spriteSourceSize</key>
+                <string>{121,53}</string>
+                <key>textureRect</key>
+                <string>{{1,20},{49,29}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>Dead (0_1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.528926,0.132075}</string>
+                <key>spriteOffset</key>
+                <string>{3,-13}</string>
+                <key>spriteSize</key>
+                <string>{49,21}</string>
+                <key>spriteSourceSize</key>
+                <string>{121,53}</string>
+                <key>textureRect</key>
+                <string>{{32,20},{49,21}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>Dead (0_2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.595041,0.132075}</string>
+                <key>spriteOffset</key>
+                <string>{10,-15}</string>
+                <key>spriteSize</key>
+                <string>{55,17}</string>
+                <key>spriteSourceSize</key>
+                <string>{121,53}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{55,17}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>BlueSlime_Dead.png</string>
+            <key>size</key>
+            <string>{57,70}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:c43882f478383dfd18fd872cd233222e:3c17614526f1d21ca8cadc9e6484bf40:16c4893efc89164ec92a814c0e3a92da$</string>
+            <key>textureFileName</key>
+            <string>BlueSlime_Dead.png</string>
+        </dict>
+    </dict>
+</plist>
