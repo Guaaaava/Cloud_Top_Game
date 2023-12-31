@@ -47,7 +47,7 @@ public:
 	// 获取商店对象
 	Shop* getShop() { return _shop; };
 
-	inline bool isInMyBound(struct Command pos);			//判断点是否在我方棋盘内
+	inline bool IsInMyBound(struct Command pos);			//判断点是否在我方棋盘内
 	inline bool hasHero(struct Command pos);				//判断该位置是否有棋子
 	inline bool placeHero(Hero* hero,struct Command pos);	//放置英雄
 	int isEnd();											//判定游戏结束
