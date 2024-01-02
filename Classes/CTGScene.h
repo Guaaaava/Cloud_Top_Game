@@ -6,13 +6,13 @@ USING_NS_CC;			// 相当于 using namespace cocos2d;
 #include "ui/CocosGUI.h"
 using namespace ui;
 
-#include"Hero.h"
-#include "Monster.h"
+#include "Hero.h"
+#include "ChessBoard.h"
+#include "WebSocketClient.h"
 
-#define WORDS_GAME_NAME 1001	// “金铲铲之战”编码
-#define WORDS_START     1002	// “开始”编码
-#define WORDS_SHOP      1003	// “商店”编码
-#define WORDS_EXIT      1004	// “退出”编码
+const float SHOP_HEIGHT = 210.0f;		// 商店卡牌高度
+const float CHESSBOARD_WIDTH = 1150.0f;	// 棋盘图片宽度
+const float CHESSBOARD_HEIGHT = 950.0f;	// 棋盘图片高度
 
 /****************************************************
  * 功能：显示金铲铲之战场景
@@ -26,59 +26,25 @@ class CTGScene : public Scene
 public:
 	CREATE_FUNC(CTGScene);		// 创建 create() 函数
 
-	virtual bool init();
+	virtual bool init();		// 初始化场景
 
-	// 创建一个通用按钮
-	static MenuItemImage* createGameButton(std::string name, const ccMenuCallback& callback);
+	static LayerColor* getLayer() { return layer; };	// 获取背景层（静态成员）
 	
+	//static websocket_endpoint* getEndpoint() { return client; };
+
+	//~CTGScene() { CC_SAFE_DELETE(client); };
 private:
-	// 记录背景层
-	Node* prt_backGround;
 
-	// 记录商店按钮大小位置
-	Rect prt_shopButtonSize;
+	static LayerColor* layer;	// 记录背景层（静态成员）
 
-	// 游戏开始按钮的点击事件
-	void menuStartCallback(Ref* sender);
+	HeroMsg touchingHero;		// 被选中的英雄
+	Vec2 firstPos;				//被选中的英雄的初始位置
 
-	// 打开商店按钮的点击事件
-	void menuOpenShopCallback(Ref* sender);
+	virtual bool onTouchBegan(Touch* touch, Event* event);	// 按下鼠标的回调
+	virtual void onTouchMoved(Touch* touch, Event* event);	// 移动鼠标的回调
+	virtual void onTouchEnded(Touch* touch, Event* event);	// 释放鼠标的回调
 
-	// 退出游戏按钮的点击事件
-	void menuExitGameCallback(Ref* sender);
+	HeroMsg judgePointInSprite(Point pnt);	// 判断触摸点是否在已有英雄区域内，是则返回该英雄，否则返回nullptr
 
-	// 按下按钮的回调
-	virtual bool onTouchBegan(Touch* touch, Event* event);
-
-	// 释放按钮的回调
-	virtual void onTouchEnded(Touch* touch, Event* event);
-
-	// 创建一个商店结点
-	void createShopNode();
-
-	void upHeros();
-	// 英雄
-	Samurai* sam = Samurai::create();
-	BlueSlime* blu = BlueSlime::create();
-	
-
-	/*
-	Knight* kni = Knight::create();
-	Kunoichi* kun = Kunoichi::create();
-	LightningMage* lig = LightningMage::create();
-	FireVizard* fir = FireVizard::create();
-	WandererMagican* wan = WandererMagican::create();
-	NinjaMonk* mon = NinjaMonk::create();
-	NinjaPeasant* pea = NinjaPeasant::create();
-	SamuraiCommander* com = SamuraiCommander::create();
-	Berserker* ber = Berserker::create();
-
-	// 野怪
-	//BlackWerewolf* bla = BlackWerewolf::create();
-	//SkeletonWarrior* ske = SkeletonWarrior::create();
-
-	*/
-	
-	
-
+	//static websocket_endpoint* client; // 客户端
 };
