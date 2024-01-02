@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\libcocos2d.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Cloud_Top_Game.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

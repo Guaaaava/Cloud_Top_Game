@@ -1,0 +1,229 @@
+﻿D:\Visual Studio 2022\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2146,5): warning : The referenced project '..\cocos2d\external\Box2D\proj.win32\libbox2d.vcxproj' does not exist.
+  AppDelegate.cpp
+  ChessBoard.cpp
+  ConfigController.cpp
+  CTGScene.cpp
+  GameController.cpp
+  Hero.cpp
+  LittleHero.cpp
+  MAINScene.cpp
+  SETTINGSScene.cpp
+  Shop.cpp
+  startScene.cpp
+  main.cpp
+    正在创建库 D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Cloud_Top_Game.lib 和对象 D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Cloud_Top_Game.exp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 1931 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Cloud_Top_Game.vcxproj -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Cloud_Top_Game.exe
+  'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+  或批处理文件。
+  正在执行自定义生成步骤
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\ChessBoardScene.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\ChessBoardScene.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessOrigin.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessOrigin.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\CloseNormal.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\CloseNormal.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\CloseSelected.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\CloseSelected.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\DisabledLevelUpButton.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\DisabledLevelUpButton.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\DisabledRefreshShopButton.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\DisabledRefreshShopButton.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\gameMode.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\gameMode.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\HelloWorld.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\HelloWorld.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LevelLabelBackGround.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LevelLabelBackGround.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\MoneyLabelBackGround.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\MoneyLabelBackGround.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NormalLevelUpButton.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NormalLevelUpButton.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NormalRefreshShopButton.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NormalRefreshShopButton.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SelectedLevelUpButton.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SelectedLevelUpButton.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SelectedRefreshShopButton.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SelectedRefreshShopButton.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SellOrigin.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SellOrigin.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\standOrigin.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\standOrigin.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\StartScene.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\StartScene.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Berserker\Berserker_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Berserker\Berserker_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Berserker\Berserker_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Berserker\Berserker_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Berserker\Berserker_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Berserker\Berserker_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Berserker\Berserker_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Berserker\Berserker_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Berserker\Berserker_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Berserker\Berserker_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Berserker\Berserker_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Berserker\Berserker_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Berserker\Berserker_Skill.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Berserker\Berserker_Skill.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Berserker\Berserker_Skill.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Berserker\Berserker_Skill.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\BlueSlime\BlueSlime_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\BlueSlime\BlueSlime_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\BlueSlime\BlueSlime_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\BlueSlime\BlueSlime_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\BlueSlime\BlueSlime_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\BlueSlime\BlueSlime_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\BlueSlime\BlueSlime_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\BlueSlime\BlueSlime_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\BlueSlime\BlueSlime_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\BlueSlime\BlueSlime_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\BlueSlime\BlueSlime_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\BlueSlime\BlueSlime_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\10A.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\10A.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\10B.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\10B.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\10C.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\10C.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\1A.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\1A.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\1B.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\1B.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\1C.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\1C.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\2A.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\2A.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\2B.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\2B.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\2C.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\2C.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\3A.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\3A.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\3B.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\3B.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\3C.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\3C.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\4A.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\4A.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\4B.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\4B.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\4C.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\4C.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\5A.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\5A.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\5B.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\5B.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\5C.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\5C.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\6A.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\6A.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\6B.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\6B.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\6C.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\6C.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\7A.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\7A.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\7B.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\7B.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\7C.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\7C.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\8A.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\8A.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\8B.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\8B.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\8C.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\8C.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\9A.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\9A.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\9B.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\9B.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\chessButton\9C.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\chessButton\9C.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\FireVizard\FireVizard_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\FireVizard\FireVizard_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\FireVizard\FireVizard_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\FireVizard\FireVizard_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\FireVizard\FireVizard_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\FireVizard\FireVizard_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\FireVizard\FireVizard_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\FireVizard\FireVizard_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\FireVizard\FireVizard_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\FireVizard\FireVizard_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\FireVizard\FireVizard_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\FireVizard\FireVizard_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\FireVizard\FireVizard_Skill.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\FireVizard\FireVizard_Skill.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\FireVizard\FireVizard_Skill.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\FireVizard\FireVizard_Skill.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\fonts\arial.ttf -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\fonts\arial.ttf
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\fonts\Genshin.ttf -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\fonts\Genshin.ttf
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\fonts\Marker Felt.ttf -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\fonts\Marker Felt.ttf
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\fonts\simkai.ttf -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\fonts\simkai.ttf
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\fonts\TJL.ttf -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\fonts\TJL.ttf
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Knight\Knight_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Knight\Knight_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Knight\Knight_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Knight\Knight_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Knight\Knight_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Knight\Knight_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Knight\Knight_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Knight\Knight_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Knight\Knight_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Knight\Knight_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Knight\Knight_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Knight\Knight_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Knight\Knight_Skill.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Knight\Knight_Skill.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Knight\Knight_Skill.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Knight\Knight_Skill.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Kunoichi\Kunoichi_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Kunoichi\Kunoichi_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Kunoichi\Kunoichi_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Kunoichi\Kunoichi_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Kunoichi\Kunoichi_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Kunoichi\Kunoichi_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Kunoichi\Kunoichi_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Kunoichi\Kunoichi_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Kunoichi\Kunoichi_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Kunoichi\Kunoichi_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Kunoichi\Kunoichi_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Kunoichi\Kunoichi_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Kunoichi\Kunoichi_Skill.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Kunoichi\Kunoichi_Skill.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Kunoichi\Kunoichi_Skill.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Kunoichi\Kunoichi_Skill.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LightningMage\LightningMage_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LightningMage\LightningMage_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LightningMage\LightningMage_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LightningMage\LightningMage_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LightningMage\LightningMage_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LightningMage\LightningMage_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LightningMage\LightningMage_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LightningMage\LightningMage_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LightningMage\LightningMage_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LightningMage\LightningMage_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LightningMage\LightningMage_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LightningMage\LightningMage_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LightningMage\LightningMage_Skill.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LightningMage\LightningMage_Skill.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LightningMage\LightningMage_Skill.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LightningMage\LightningMage_Skill.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LittleHero\LittleHero_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LittleHero\LittleHero_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LittleHero\LittleHero_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LittleHero\LittleHero_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\LittleHero\Stand.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\LittleHero\Stand.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\mainScene\Lonely Warrior.mp3 -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\mainScene\Lonely Warrior.mp3
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\mainScene\mainBackground.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\mainScene\mainBackground.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\mainScene\onlineModeNormal.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\mainScene\onlineModeNormal.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\mainScene\onlineModeSelected.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\mainScene\onlineModeSelected.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\mainScene\settingsDisabled.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\mainScene\settingsDisabled.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\mainScene\settingsNormal.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\mainScene\settingsNormal.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\mainScene\settingsSelected.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\mainScene\settingsSelected.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\mainScene\trainingModeNormal.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\mainScene\trainingModeNormal.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\mainScene\trainingModeSelected.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\mainScene\trainingModeSelected.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\mainScene\undertale.mp3 -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\mainScene\undertale.mp3
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaMonk\NinjaMonk_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaMonk\NinjaMonk_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaMonk\NinjaMonk_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaMonk\NinjaMonk_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaMonk\NinjaMonk_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaMonk\NinjaMonk_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaMonk\NinjaMonk_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaMonk\NinjaMonk_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaMonk\NinjaMonk_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaMonk\NinjaMonk_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaMonk\NinjaMonk_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaMonk\NinjaMonk_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaMonk\NinjaMonk_Skill.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaMonk\NinjaMonk_Skill.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaMonk\NinjaMonk_Skill.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaMonk\NinjaMonk_Skill.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaPeasant\NinjaPeasant_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaPeasant\NinjaPeasant_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaPeasant\NinjaPeasant_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaPeasant\NinjaPeasant_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaPeasant\NinjaPeasant_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaPeasant\NinjaPeasant_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaPeasant\NinjaPeasant_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaPeasant\NinjaPeasant_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaPeasant\NinjaPeasant_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaPeasant\NinjaPeasant_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaPeasant\NinjaPeasant_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaPeasant\NinjaPeasant_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaPeasant\NinjaPeasant_Skill.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaPeasant\NinjaPeasant_Skill.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\NinjaPeasant\NinjaPeasant_Skill.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\NinjaPeasant\NinjaPeasant_Skill.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\10Template.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\10Template.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\1Template.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\1Template.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\2Template.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\2Template.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\3Template.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\3Template.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\4Template.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\4Template.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\5Template.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\5Template.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\6Template.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\6Template.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\7Template.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\7Template.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\8Template.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\8Template.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\9Template.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\9Template.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\ChessBoardTemplate.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\ChessBoardTemplate.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\ChessButtonTemplate.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\ChessButtonTemplate.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\LevelUpBottonTemplate.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\LevelUpBottonTemplate.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\RefreshShopBottonTemplate.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\RefreshShopBottonTemplate.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\PictureTemplates\SellOriginTemplate.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\PictureTemplates\SellOriginTemplate.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\res\.gitkeep -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\res\.gitkeep
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\res\CNWords.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\res\CNWords.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\res\PicPath.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\res\PicPath.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Samurai\Idle.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Samurai\Idle.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Samurai\Samurai_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Samurai\Samurai_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Samurai\Samurai_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Samurai\Samurai_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Samurai\Samurai_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Samurai\Samurai_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Samurai\Samurai_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Samurai\Samurai_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Samurai\Samurai_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Samurai\Samurai_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Samurai\Samurai_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Samurai\Samurai_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Samurai\Samurai_Skill.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Samurai\Samurai_Skill.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\Samurai\Samurai_Skill.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\Samurai\Samurai_Skill.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SamuraiCommander\SamuraiCommander_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SamuraiCommander\SamuraiCommander_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SamuraiCommander\SamuraiCommander_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SamuraiCommander\SamuraiCommander_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SamuraiCommander\SamuraiCommander_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SamuraiCommander\SamuraiCommander_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SamuraiCommander\SamuraiCommander_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SamuraiCommander\SamuraiCommander_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SamuraiCommander\SamuraiCommander_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SamuraiCommander\SamuraiCommander_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SamuraiCommander\SamuraiCommander_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SamuraiCommander\SamuraiCommander_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SamuraiCommander\SamuraiCommander_Skill.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SamuraiCommander\SamuraiCommander_Skill.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\SamuraiCommander\SamuraiCommander_Skill.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\SamuraiCommander\SamuraiCommander_Skill.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\background.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\background.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\CheckBoxNode_Disable.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\CheckBoxNode_Disable.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\CheckBoxNode_Normal.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\CheckBoxNode_Normal.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\CheckBox_Disable.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\CheckBox_Disable.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\CheckBox_Normal.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\CheckBox_Normal.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\CheckBox_Press.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\CheckBox_Press.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\closeNormal.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\closeNormal.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\closeSelected.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\closeSelected.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\MusicSlider_Back.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\MusicSlider_Back.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\MusicSlider_Back_test.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\MusicSlider_Back_test.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\musicSlider_NodeDisabled.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\musicSlider_NodeDisabled.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\musicSlider_NodeNormal.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\musicSlider_NodeNormal.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\musicSlider_NodeNormal_test.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\musicSlider_NodeNormal_test.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\musicSlider_NodeSelected.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\musicSlider_NodeSelected.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\musicSLider_pressBar.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\musicSLider_pressBar.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\musicSLider_pressBar_test.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\musicSLider_pressBar_test.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\settings\settingsBackground.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\settings\settingsBackground.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\silentSprite\1.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\silentSprite\1.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\silentSprite\10.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\silentSprite\10.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\silentSprite\2.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\silentSprite\2.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\silentSprite\3.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\silentSprite\3.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\silentSprite\4.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\silentSprite\4.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\silentSprite\5.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\silentSprite\5.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\silentSprite\6.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\silentSprite\6.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\silentSprite\7.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\silentSprite\7.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\silentSprite\8.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\silentSprite\8.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\silentSprite\9.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\silentSprite\9.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\startScene\BtnDisabled.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\startScene\BtnDisabled.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\startScene\BtnNormal.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\startScene\BtnNormal.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\startScene\BtnSelected.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\startScene\BtnSelected.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\startScene\Lonely Warrior.mp3 -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\startScene\Lonely Warrior.mp3
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\startScene\silenceBtnOFF.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\startScene\silenceBtnOFF.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\startScene\silenceBtnON.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\startScene\silenceBtnON.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\startScene\start.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\startScene\start.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\StatusBar\HealthBar.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\StatusBar\HealthBar.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\StatusBar\MagicBar.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\StatusBar\MagicBar.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\WandererMagican\WandererMagican_Attack.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\WandererMagican\WandererMagican_Attack.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\WandererMagican\WandererMagican_Attack.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\WandererMagican\WandererMagican_Attack.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\WandererMagican\WandererMagican_Dead.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\WandererMagican\WandererMagican_Dead.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\WandererMagican\WandererMagican_Dead.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\WandererMagican\WandererMagican_Dead.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\WandererMagican\WandererMagican_Run.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\WandererMagican\WandererMagican_Run.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\WandererMagican\WandererMagican_Run.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\WandererMagican\WandererMagican_Run.png
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\WandererMagican\WandererMagican_Skill.plist -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\WandererMagican\WandererMagican_Skill.plist
+  D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\Resources\WandererMagican\WandererMagican_Skill.png -> D:\SOFTWARE\Cocos2d-x\cocos2d-x-3.17\Cloud_Top_Game\proj.win32\Release.win32\WandererMagican\WandererMagican_Skill.png
+  复制了 206 个文件
